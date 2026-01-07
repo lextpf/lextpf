@@ -26,10 +26,9 @@ constexpr auto alex = Developer
 
 ## Tech Stack 💻
 
-<div align="center">
-
+<p align="center">
+<a href="https://skillicons.dev">
 <!-- Core technologies -->
 <img src="https://skillicons.dev/icons?theme=light&i=cpp,py,js,ts,html,css,latex,powershell,cmake,nodejs,npm,vite,dotnet,react,jquery,bootstrap,qt,opencv,selenium,gherkin,regex,postman,git,github,githubactions,mysql,vscode,atom&theme=dark" alt="Core Skills" />
-
-</div>
-
+</a>
+</p>
