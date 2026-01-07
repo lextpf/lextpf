@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Header with typing animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&width=435&lines=Hey%2C+I'm+alex+%F0%9F%98%8A;Swe+from+germany+%F0%9F%93%8D;template+%3Ctypename+T%3E+enthusiast)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=3000&pause=2000&center=true&width=435&lines=hey%2C+I'm+alex+%F0%9F%98%8A%E2%9C%A8;swe+%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB+from+germany+%F0%9F%93%8D;template+%3Ctypename+T%3E+enthusiast)](https://git.io/typing-svg)
 
 <!-- Status badges with cohesive style -->
 ![Ask](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)
