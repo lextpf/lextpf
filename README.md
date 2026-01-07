@@ -15,12 +15,15 @@
 ## About Me ☕
 
 ```cpp
-constexpr auto alex = Developer
-{
+constexpr auto alex = Developer {
     .name     = "Alex",
     .location = "Germany",
     .focus    = "Modern C++",
-    .hobbies  = { "Game Modding 🎮", "3x3 Speedcubing ⌛", "Open Source 📢" }
+    .hobbies  = {
+        "Game Modding 🎮",
+        "3x3 Speedcubing ⌛",
+        "Open Source 📢"'
+    }
 };
 ```
 
