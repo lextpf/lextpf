@@ -29,7 +29,7 @@ constexpr auto alex = Developer
 <div align="center">
 
 <!-- Core technologies -->
-<img src="https://skillicons.dev/icons?i=cpp,py,js,ts,html,css,latex,powershell,cmake,nodejs,npm,vite,dotnet,react,jquery,bootstrap,qt,opencv,selenium,gherkin,regex,postman,git,github,githubactions,vscode,atom&theme=dark" alt="Core Skills" />
+<img src="https://skillicons.dev/icons?i=cpp,py,js,ts,html,css,latex,powershell,cmake,nodejs,npm,vite,dotnet,react,jquery,bootstrap,qt,opencv,selenium,gherkin,regex,postman,git,github,githubactions,mysql,vscode,atom&theme=dark" alt="Core Skills" />
 
 </div>
 
