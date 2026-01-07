@@ -14,9 +14,9 @@
 ## About Me ☕
 ```cpp
 struct Developer {
-    static constexpr std::string_view name     = "Alexander Töpfer";
+    static constexpr std::string_view name     = "Alex";
     static constexpr std::string_view location = "Germany";
-    static constexpr std::string_view focus    = "Modern C++23";
+    static constexpr std::string_view focus    = "Modern C++";
 };
 ```
 
