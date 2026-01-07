@@ -22,7 +22,7 @@ constexpr auto alex = Developer {
     .m_Hobbies  = {
         "Game Modding 🎮",
         "3x3 Speedcubing ⌛",
-        "Open Source 📢"'
+        "Open Source 📢"
     }
 };
 ```
