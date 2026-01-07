@@ -15,7 +15,7 @@
 ## About Me ☕
 
 ```cpp
-constexpr auto alex = Developer {
+constexpr auto gAlex = Developer {
     .m_Name     = "Alex",
     .m_Location = "Germany",
     .m_Focus    = "Modern C++",
