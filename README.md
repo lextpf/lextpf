@@ -13,7 +13,7 @@
 
 </div>
 
-$\color{black}{About\ Me\ ☕\}$
+> ### $\color{black}{About\ Me\}$ ☕
 ```cpp
 constexpr auto gAlex = Developer
 {
@@ -28,8 +28,7 @@ constexpr auto gAlex = Developer
     }
 };
 ```
-
-$\color{black}{Tech\ Stack\ 💻\}$
+> ### $\color{black}{Tech\ Stack\}$ 💻
 <p align="center">
 <a href="https://skillicons.dev">
 <!-- Core technologies -->
