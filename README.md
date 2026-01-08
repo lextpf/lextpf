@@ -35,6 +35,6 @@ constexpr auto gAlex = Developer
 <p align="center">
 <a href="https://skillicons.dev">
 <!-- Core technologies -->
-<img src="https://skillicons.dev/icons?theme=light&i=cpp,py,js,ts,html,css,latex,powershell,cmake,nodejs,npm,vite,dotnet,react,jquery,bootstrap,qt,opencv,selenium,gherkin,regex,postman,git,github,githubactions,mysql,vscode,atom&theme=dark" alt="Core Skills" />
+<img src="https://skillicons.dev/icons?theme=light&i=cpp,cs,py,r,js,ts,html,md,css,latex,powershell,cmake,nodejs,npm,yarn,vite,dotnet,react,jquery,bootstrap,qt,opencv,selenium,gherkin,regex,postman,git,github,githubactions,mysql,vscode&theme=dark" alt="Core Skills" />
 </a>
 </p>
