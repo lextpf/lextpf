@@ -16,11 +16,13 @@
 ## About Me ☕
 
 ```cpp
-constexpr auto gAlex = Developer {
+constexpr auto gAlex = Developer
+{
     .m_Name     = "Alex",
     .m_Location = "Germany",
     .m_Focus    = "Modern C++",
-    .m_Hobbies  = {
+    .m_Hobbies  =
+    {
         "Game Modding 🎮",
         "3x3 Speedcubing ⌛",
         "Open Source 📢"
