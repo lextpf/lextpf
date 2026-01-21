@@ -15,7 +15,7 @@
 
 > ### $\color{black}{About\ Me\}$ ☕
 ```cpp
-constexpr auto gAlex = Developer
+constexpr auto g_Alex = Developer
 {
     .m_Name     = "Alex",
     .m_Location = "Germany",
