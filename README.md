@@ -26,4 +26,4 @@ constexpr auto g_Alex = Developer
     }
 };
 ```
-![](https://github-profile-trophy-tawny.vercel.app/?username=lextpf&theme=flat&title=Stars,Experience,Commits,Followers,Repositories&margin-w=1)
+![](./svg-trophies.svg)
