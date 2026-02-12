@@ -25,10 +25,3 @@ constexpr auto g_Alex = Developer
     }
 };
 ```
-> ### $\color{black}{Tech\ Stack\}$ 💻
-<p align="center">
-<a href="https://skillicons.dev">
-<!-- Core technologies -->
-<img src="https://skillicons.dev/icons?theme=light&i=cpp,cs,py,r,js,ts,html,md,css,latex,powershell,cmake,nodejs,npm,yarn,vite,dotnet,react,jquery,bootstrap,qt,opencv,selenium,gherkin,regex,postman,git,github,mysql,vscode&theme=dark" alt="Core Skills" />
-</a>
-</p>
