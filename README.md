@@ -20,8 +20,8 @@
 ```cpp
 constexpr auto g_Alex = Developer
 {
-    .m_Name     = "Alex", .m_Location = "Germany", .m_Stack = "Modern C++",
-    .m_Hobbies  =
+    .m_Name    = "Alex", .m_Location = "Germany", .m_Stack = "Modern C++",
+    .m_Hobbies =
     {
         "Game Modding 🎮", "3x3 Speedcubing ⌛", "Chess 👑", "Open Source 📢"
     }
