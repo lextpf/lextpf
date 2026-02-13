@@ -27,4 +27,9 @@ constexpr auto g_Alex = Developer
     }
 };
 ```
+
+<div align="center">
+
 ![Trophies](./svg-trophies-v4.svg)
+
+</div>
