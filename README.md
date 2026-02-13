@@ -30,6 +30,6 @@ constexpr auto g_Alex = Developer
 
 <div align="center">
 
-![Trophies](./svg-trophies-v5.svg)
+![Trophies](./svg-trophies-v6.svg)
 
 </div>
