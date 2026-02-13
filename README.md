@@ -27,4 +27,4 @@ constexpr auto g_Alex = Developer
     }
 };
 ```
-![Trophies](./svg-trophies-v2.svg)
+![Trophies](./svg-trophies-v3.svg)
