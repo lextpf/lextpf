@@ -16,7 +16,7 @@
 
 </div>
 
-> ### $\color{black}{About\ Me\}$ ☕
+> ### $\color{grey}{About\ Me\}$ ☕
 ```cpp
 constexpr auto g_Alex = Developer
 {
@@ -27,4 +27,4 @@ constexpr auto g_Alex = Developer
     }
 };
 ```
-![Trophies](./svg-trophies-v3.svg)
+![Trophies](./svg-trophies-v4.svg)
