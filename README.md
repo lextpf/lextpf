@@ -25,6 +25,6 @@ constexpr auto g_Var = Developer
 
 <div align="center">
 
-![Trophies](./svg-trophies-v8.svg)
+![Trophies](./svg-trophies-v9.svg)
 
 </div>
