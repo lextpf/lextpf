@@ -1,0 +1,1675 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="776" height="128" viewBox="0 0 776 128" fill="none">
+<defs>
+  <!-- Metallic Gold Gradients -->
+  <linearGradient id="g-body" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#fff5b8"/>
+    <stop offset="20%" stop-color="#ffd700"/>
+    <stop offset="45%" stop-color="#eac200"/>
+    <stop offset="65%" stop-color="#c9a400"/>
+    <stop offset="85%" stop-color="#eac200"/>
+    <stop offset="100%" stop-color="#ffd700"/>
+  </linearGradient>
+  <linearGradient id="g-rim" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#fffce8"/>
+    <stop offset="35%" stop-color="#ffd700"/>
+    <stop offset="65%" stop-color="#daa520"/>
+    <stop offset="100%" stop-color="#ffd700"/>
+  </linearGradient>
+  <linearGradient id="g-base" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ffd700"/>
+    <stop offset="60%" stop-color="#b8860b"/>
+    <stop offset="100%" stop-color="#8b6914"/>
+  </linearGradient>
+  <linearGradient id="g-handle" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#ffe44d"/>
+    <stop offset="100%" stop-color="#c9a400"/>
+  </linearGradient>
+  <linearGradient id="g-progress" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#0366d6"/>
+    <stop offset="50%" stop-color="#2188ff"/>
+    <stop offset="100%" stop-color="#0366d6"/>
+  </linearGradient>
+  <radialGradient id="g-card" cx="50%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#fffdf2"/>
+    <stop offset="100%" stop-color="#ffffff"/>
+  </radialGradient>
+  <radialGradient id="g-glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#ffd700" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="g-laurel-glow" cx="50%" cy="45%" r="55%">
+    <stop offset="0%" stop-color="#00c853" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#00c853" stop-opacity="0"/>
+  </radialGradient>
+  <!-- Silver Metallic Gradients (B-rank) -->
+  <linearGradient id="g-sv-body" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f0f0f5"/>
+    <stop offset="20%" stop-color="#d0d0d8"/>
+    <stop offset="45%" stop-color="#b8b8c2"/>
+    <stop offset="65%" stop-color="#a0a0aa"/>
+    <stop offset="85%" stop-color="#b8b8c2"/>
+    <stop offset="100%" stop-color="#d0d0d8"/>
+  </linearGradient>
+  <linearGradient id="g-sv-rim" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#f8f8ff"/>
+    <stop offset="35%" stop-color="#d0d0d8"/>
+    <stop offset="65%" stop-color="#a8a8b5"/>
+    <stop offset="100%" stop-color="#d0d0d8"/>
+  </linearGradient>
+  <linearGradient id="g-sv-base" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#c0c0c8"/>
+    <stop offset="60%" stop-color="#888892"/>
+    <stop offset="100%" stop-color="#6a6a74"/>
+  </linearGradient>
+  <linearGradient id="g-sv-handle" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#e0e0e8"/>
+    <stop offset="100%" stop-color="#a0a0aa"/>
+  </linearGradient>
+  <radialGradient id="g-sv-glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#c0c0d0" stop-opacity="0.1"/>
+    <stop offset="100%" stop-color="#c0c0d0" stop-opacity="0"/>
+  </radialGradient>
+  <!-- Laurel filter for softer appearance with depth -->
+  <filter id="f-laurel" x="-3%" y="-3%" width="106%" height="106%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="0.15" result="soft"/>
+    <feColorMatrix in="soft" type="saturate" values="1.3" result="vivid"/>
+    <feMerge>
+      <feMergeNode in="vivid"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <!-- Darken filter for secondary trophies -->
+  <filter id="f-darken" x="0" y="0" width="100%" height="100%">
+    <feColorMatrix type="saturate" values="0.65" result="desat"/>
+    <feComponentTransfer in="desat">
+      <feFuncR type="linear" slope="0.42"/>
+      <feFuncG type="linear" slope="0.42"/>
+      <feFuncB type="linear" slope="0.42"/>
+      <feFuncA type="linear" slope="0.5"/>
+    </feComponentTransfer>
+  </filter>
+  <!-- Aurora laurel glow filter -->
+  <filter id="f-au-laurel" x="-12%" y="-12%" width="124%" height="124%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="0.15" result="soft"/>
+    <feColorMatrix in="soft" type="saturate" values="1.6" result="vivid"/>
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="glow"/>
+    <feFlood flood-color="#00e5b0" flood-opacity="0.03" result="teal"/>
+    <feComposite in="teal" in2="glow" operator="in" result="teal-glow"/>
+    <feMerge>
+      <feMergeNode in="teal-glow"/>
+      <feMergeNode in="vivid"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <style>
+    @keyframes sparkle { 0%,100%{opacity:0.1} 50%{opacity:0.85} }
+    .sp { fill:#ffd700; animation: sparkle 2.5s ease-in-out infinite; }
+    .sp1 { animation-delay: 0s; }
+    .sp2 { animation-delay: 0.7s; }
+    .sp3 { animation-delay: 1.4s; }
+    .sp4 { animation-delay: 2.1s; }
+    .sp5 { animation-delay: 0.35s; }
+    @keyframes StarsRankAnimation { from{width:0} to{width:16.8px} }
+    #Stars-rank-progress { animation: StarsRankAnimation 1s forwards ease-in-out; }
+    @keyframes SonarRankAnimation { from{width:0} to{width:80px} }
+    #Sonar-rank-progress { animation: SonarRankAnimation 1s forwards ease-in-out; }
+    @keyframes ReadmeRankAnimation { from{width:0} to{width:80px} }
+    #Readme-rank-progress { animation: ReadmeRankAnimation 1s forwards ease-in-out; }
+    @keyframes CommitsRankAnimation { from{width:0} to{width:58px} }
+    #Commits-rank-progress { animation: CommitsRankAnimation 1s forwards ease-in-out; }
+    @keyframes FollowersRankAnimation { from{width:0} to{width:74.66666666666667px} }
+    #Followers-rank-progress { animation: FollowersRankAnimation 1s forwards ease-in-out; }
+    @keyframes RepositoriesRankAnimation { from{width:0} to{width:72px} }
+    #Repositories-rank-progress { animation: RepositoriesRankAnimation 1s forwards ease-in-out; }
+    .sp-sv { fill:#c0c0d0; animation: sparkle 2.5s ease-in-out infinite; }
+    @keyframes SpeedRankAnimation { from{width:0} to{width:80px} }
+    #Speed-rank-progress { animation: SpeedRankAnimation 1s forwards ease-in-out; }
+    @keyframes aurora-shimmer { 0%,100%{opacity:0.15} 50%{opacity:0.55} }
+    .sp-aurora { animation: sparkle 2s ease-in-out infinite; }
+    .sp-a1 { fill:#00e5b0; animation-delay: 0s; }
+    .sp-a2 { fill:#00bfff; animation-delay: 0.5s; }
+    .sp-a3 { fill:#9370db; animation-delay: 1s; }
+    .sp-a4 { fill:#da70d6; animation-delay: 1.5s; }
+    .sp-a5 { fill:#00e5b0; animation-delay: 0.25s; }
+    .sp-a6 { fill:#00bfff; animation-delay: 0.75s; }
+    .sp-a7 { fill:#9370db; animation-delay: 1.25s; }
+    @keyframes sss-trophy-glow { 0%,100%{filter:drop-shadow(0 0 0.5px #00e5b0)} 33%{filter:drop-shadow(0 0 0.7px #9370db)} 66%{filter:drop-shadow(0 0 0.7px #00bfff)} }
+    .sss-trophy { animation: sss-trophy-glow 3s ease-in-out infinite; }
+    @keyframes sss-crown-gleam { 0%,100%{opacity:0.7} 50%{opacity:1} }
+    .sss-crown { animation: sss-crown-gleam 2s ease-in-out infinite; }
+    @keyframes sss-gem-pulse { 0%,100%{opacity:0.5} 50%{opacity:0.9} }
+    .sss-gem { animation: sss-gem-pulse 1.8s ease-in-out infinite; }
+    .sss-gem-d1 { animation-delay: 0s; }
+    .sss-gem-d2 { animation-delay: 0.6s; }
+    .sss-gem-d3 { animation-delay: 1.2s; }
+    @keyframes au-wreath-pulse { 0%,100%{opacity:0.85} 50%{opacity:1} }
+    @keyframes au-wreath-shift { 0%,100%{opacity:0.12} 33%{opacity:0.22} 66%{opacity:0.08} }
+    .au-wreath-main { animation: au-wreath-pulse 4s ease-in-out infinite; }
+    .au-wreath-overlay { animation: au-wreath-shift 5s ease-in-out infinite; }
+    @keyframes au-leaf-sparkle { 0%,100%{opacity:0} 50%{opacity:0.7} }
+    .au-lf-sp { animation: au-leaf-sparkle 2.8s ease-in-out infinite; }
+    .au-lf1 { animation-delay: 0s; }
+    .au-lf2 { animation-delay: 0.4s; }
+    .au-lf3 { animation-delay: 0.8s; }
+    .au-lf4 { animation-delay: 1.2s; }
+    .au-lf5 { animation-delay: 1.6s; }
+    .au-lf6 { animation-delay: 2.0s; }
+    .au-lf7 { animation-delay: 2.4s; }
+    .au-lf8 { animation-delay: 0.2s; }
+    .au-lf9 { animation-delay: 0.6s; }
+    .au-lf10 { animation-delay: 1.0s; }
+  </style>
+
+  <!-- Laurel Wreath (original potrace base + detail enhancements) -->
+  <g id="lp">
+    <!-- Original wreath shape -->
+    <g transform="translate(20.000000,60.000000) scale(0.00400000,-0.00400000)" fill="#1a9e5a" stroke="none" opacity="0.7" filter="url(#f-laurel)">
+<path d="M200 5103 c0 -2 18 -40 41 -84 47 -95 62 -132 50 -125 -15 10 -18 -39 -6 -87 31 -121 265 -468 412 -608 124 -119 281 -222 383 -251 36 -10 49 -16 30 -13 -19 3 -78 12 -130 20 -117 17 -353 35 -477 35 l-93 0 53 -82 c72 -112 72 -112 59 -104 -18 11 -26 -41 -13 -84 25 -84 261 -376 404 -502 95 -83 222 -168 304 -205 98 -43 194 -73 242 -74 l46 -1 -45 -8 c-25 -5 -124 -21 -220 -36 -96 -15 -177 -29 -180 -31 -2 -2 0 -7 5 -11 27 -19 138 -144 123 -139 -18 6 -28 -10 -28 -47 0 -38 53 -108 141 -187 349 -313 631 -450 939 -453 63 0 131 2 150 7 19 4 -35 -17 -120 -46 -236 -82 -310 -110 -310 -117 0 -3 29 -28 65 -54 55 -40 102 -84 67 -62 -13 8 -32 -24 -32 -54 0 -99 486 -361 790 -426 125 -27 327 -25 444 4 113 28 261 98 309 145 39 40 56 92 38 124 -8 17 -4 24 29 49 22 16 40 32 40 36 0 4 -26 40 -58 80 -162 203 -368 328 -608 369 -89 15 -368 6 -474 -15 -131 -26 -147 -26 -59 -3 51 13 102 34 122 50 38 29 61 84 51 123 -5 18 1 26 25 39 17 8 31 19 31 23 0 4 -16 38 -35 75 -163 317 -424 501 -781 548 -113 15 -127 19 -91 30 51 14 84 58 89 118 1 20 9 33 20 37 23 7 23 6 -12 114 -108 329 -305 534 -640 662 -41 15 -59 25 -40 21 19 -5 82 -8 140 -8 81 0 113 4 142 18 39 20 73 76 65 107 -3 12 2 20 14 23 23 6 23 21 4 124 -61 320 -249 568 -544 718 -157 79 -394 147 -666 190 -88 13 -170 26 -182 29 -13 2 -23 2 -23 -1z"/>
+<path d="M12550 5099 c-232 -36 -334 -55 -445 -84 -484 -122 -761 -346 -880 -712 -26 -79 -57 -242 -48 -255 2 -5 14 -8 26 -9 12 0 16 -3 10 -6 -17 -6 -16 -38 2 -72 25 -49 75 -66 200 -66 61 0 124 4 140 8 17 5 -13 -9 -66 -31 -136 -55 -250 -126 -341 -211 -128 -120 -217 -263 -272 -439 -32 -101 -32 -110 -3 -122 12 -5 17 -9 11 -9 -8 -1 -9 -12 -5 -34 15 -66 41 -95 94 -107 31 -7 31 -7 7 -12 -14 -3 -72 -13 -130 -22 -322 -51 -553 -206 -714 -479 -25 -42 -52 -92 -60 -111 -14 -33 -14 -33 23 -54 20 -12 31 -22 26 -22 -15 0 -17 -39 -4 -78 14 -42 76 -88 130 -97 22 -4 39 -9 36 -11 -2 -2 -55 3 -118 12 -154 22 -395 15 -494 -13 -216 -62 -391 -184 -545 -380 l-41 -52 40 -32 c34 -27 39 -35 30 -51 -17 -33 -1 -85 38 -125 48 -47 196 -117 309 -145 117 -29 319 -31 444 -4 300 64 790 328 790 425 0 29 -18 63 -31 56 -5 -4 -9 -4 -9 -2 0 3 34 29 75 59 41 29 75 56 75 59 0 3 -21 13 -47 22 -349 120 -422 146 -388 140 59 -12 241 -8 310 6 208 43 437 158 636 322 241 199 314 293 265 342 -13 12 -6 24 51 86 36 40 64 73 62 75 -4 2 -107 20 -359 60 -70 12 -77 14 -39 15 48 1 144 31 241 74 139 62 318 202 451 352 104 117 225 279 249 333 21 47 21 99 0 94 -16 -3 -10 9 58 116 l50 77 -72 3 c-91 4 -362 -14 -488 -33 -179 -26 -179 -26 -116 -9 93 26 244 120 365 230 193 174 467 605 443 696 -2 10 -8 15 -13 12 -12 -7 3 30 51 126 23 45 40 85 38 89 -2 4 -23 4 -48 0z m-933 -1185 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-1290 -1860 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m40 -10 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z"/>
+<path d="M10242 4632 c-46 -140 -92 -319 -118 -457 -18 -94 -28 -519 -12 -509 4 3 5 -8 2 -25 -8 -40 21 -179 58 -274 75 -195 297 -437 400 -437 57 0 124 70 177 185 53 112 67 224 65 510 -1 120 -5 166 -23 233 -66 252 -206 515 -423 795 -39 51 -74 95 -77 99 -4 4 -26 -50 -49 -120z"/>
+<path d="M2407 4612 c-305 -408 -443 -757 -422 -1067 3 -55 8 -140 10 -190 5 -113 30 -204 83 -293 44 -74 88 -118 128 -128 102 -26 339 218 422 433 34 87 67 235 58 258 -3 9 -1 39 5 68 5 28 10 117 10 197 1 155 -15 284 -57 455 -33 137 -117 405 -126 405 -5 0 -55 -62 -111 -138z"/>
+<path d="M2970 3839 c-189 -385 -254 -632 -248 -941 2 -86 6 -151 10 -145 5 7 5 -2 2 -19 -19 -98 77 -354 181 -487 76 -96 141 -120 210 -77 70 43 195 240 239 375 20 63 46 197 40 207 -3 4 0 54 6 111 26 257 -51 553 -240 922 -42 83 -87 165 -98 184 l-21 35 -81 -165z"/>
+<path d="M9711 3929 c-124 -219 -230 -466 -276 -642 -39 -151 -47 -234 -41 -426 7 -237 39 -357 136 -517 136 -225 233 -251 355 -97 94 121 171 313 181 453 2 36 8 111 13 167 26 288 -56 600 -266 1017 l-60 120 -42 -75z"/>
+<path d="M3645 3278 c-2 -7 -14 -78 -27 -158 -19 -123 -22 -188 -23 -430 -2 -309 7 -401 50 -555 66 -232 204 -430 388 -552 120 -80 189 -70 245 34 36 69 74 205 78 283 1 30 5 109 9 175 9 135 -1 213 -41 339 -66 208 -198 406 -429 645 -147 152 -244 237 -250 219z"/>
+<path d="M8994 3143 c-289 -284 -435 -492 -514 -732 -32 -100 -55 -261 -45 -330 3 -25 8 -91 10 -146 7 -168 66 -347 129 -387 77 -48 196 11 347 170 94 98 156 199 205 331 37 99 67 234 59 262 -4 11 -2 19 5 19 8 0 10 8 7 21 -3 11 1 77 10 147 10 89 13 172 9 277 -7 191 -48 515 -65 515 -3 0 -74 -66 -157 -147z"/>
+<path d="M4501 2358 c52 -129 69 -179 59 -173 -6 4 -10 -12 -10 -42 0 -78 115 -313 252 -514 215 -317 529 -509 832 -509 124 0 166 27 180 112 1 11 8 23 15 27 10 7 11 27 2 98 -66 545 -401 836 -1164 1012 -97 23 -179 41 -182 41 -3 0 5 -24 16 -52z"/>
+<path d="M8159 2375 c-609 -138 -940 -344 -1096 -683 -59 -127 -110 -377 -88 -429 5 -10 10 -29 12 -42 13 -75 59 -101 179 -101 316 0 625 196 854 543 110 165 222 395 228 465 3 40 2 53 -7 48 -11 -7 -3 15 53 153 28 68 31 81 19 80 -5 0 -74 -16 -154 -34z"/>
+<path d="M4032 1479 c-193 -25 -435 -124 -667 -274 -108 -69 -314 -218 -315 -226 0 -4 28 -16 63 -29 66 -24 92 -40 65 -40 -10 0 -19 -12 -23 -30 -14 -65 45 -105 226 -154 572 -155 982 -93 1270 194 75 74 101 131 81 174 -9 21 -6 31 29 77 21 29 39 55 39 58 0 3 -25 24 -55 46 -229 167 -469 236 -713 204z"/>
+<path d="M8513 1476 c-155 -30 -317 -101 -446 -196 l-67 -50 40 -54 c37 -49 40 -56 29 -80 -21 -46 4 -101 80 -176 288 -287 698 -349 1270 -194 180 49 240 89 226 153 -3 16 -14 31 -23 33 -9 2 18 18 61 35 l79 30 -126 92 c-304 223 -550 347 -780 395 -113 23 -257 28 -343 12z"/>
+<path d="M6324 1249 c-48 -14 -120 -83 -139 -134 -13 -34 -16 -60 -11 -112 4 -37 6 -84 6 -103 -2 -95 62 -193 145 -220 138 -46 285 52 292 195 1 28 8 71 14 97 10 37 10 60 0 101 -31 139 -167 217 -307 176z"/>
+<path d="M5255 1054 c-276 -46 -587 -227 -935 -541 l-54 -50 74 -23 c41 -13 67 -25 58 -27 -23 -6 -34 -48 -20 -78 16 -35 75 -61 188 -84 568 -115 968 -37 1250 243 69 69 110 130 114 171 5 42 0 66 -12 59 -12 -8 -12 -7 39 73 18 29 33 56 33 62 0 15 -49 46 -147 95 -207 104 -386 135 -588 100z"/>
+<path d="M7249 1054 c-42 -7 -109 -25 -150 -40 -76 -27 -226 -101 -267 -133 l-24 -18 41 -66 c22 -37 36 -67 31 -67 -18 0 -11 -80 11 -121 11 -22 53 -73 92 -113 279 -282 682 -361 1251 -245 113 23 172 49 188 84 14 30 3 72 -20 77 -9 3 18 15 61 29 l78 24 -93 81 c-362 313 -622 460 -902 509 -106 18 -194 18 -297 -1z"/>
+    </g>
+    <!-- === Colored leaf overlays - randomized positions, sizes, some skipped === -->
+
+    <!-- L upper (path2) - lime jagged -->
+    <path d="M30.1 38.9 L31.2 40.2 L32.0 39.8 L31.6 41.4 L32.0 42.3 L31.4 43.2 L31.8 44.4 L31.0 45.2 L30.6 46.8 L30.1 48.5 L29.4 46.5 L28.8 45.0 L28.2 44.2 L28.6 43.0 L28.0 42.0 L28.5 41.2 L28.3 39.9 L29.2 40.3z" fill="#a0dd55" opacity="0.80"/>
+    <!-- R upper (path1) - golden-green jagged -->
+    <path d="M63.5 39.2 L62.5 40.4 L62.0 40.1 L62.2 41.5 L61.8 42.2 L62.4 43.0 L62.0 44.0 L62.7 44.7 L63.2 45.6 L63.5 46.8 L64.0 45.5 L64.5 44.3 L65.0 43.5 L64.7 42.6 L65.1 41.7 L64.7 40.9 L64.8 39.9 L64.2 40.3z" fill="#68b838" opacity="0.77"/>
+
+    <!-- L mid (path3) - medium green spear -->
+    <path d="M29.5 43.8 L30.3 44.8 L30.8 44.5 L30.5 45.7 L30.9 46.3 L30.4 47.1 L30.7 47.8 L30.1 48.4 L29.7 49.3 L29.5 50.5 L29.0 49.2 L28.6 48.3 L28.2 47.6 L28.5 46.8 L28.1 46.1 L28.5 45.3 L28.3 44.3 L28.9 44.7z" fill="#45b848" opacity="0.80"/>
+    <!-- R mid (path4) - medium green spear -->
+    <path d="M58.4 44.9 L59.0 45.8 L59.4 45.6 L59.2 46.5 L59.5 47.2 L59.1 47.8 L59.3 48.5 L58.9 49.0 L58.6 49.8 L58.4 50.8 L58.1 49.7 L57.8 48.9 L57.4 48.4 L57.6 47.7 L57.3 47.0 L57.6 46.4 L57.4 45.5 L57.9 45.8z" fill="#4aad42" opacity="0.80"/>
+
+    <!-- L lower-mid (path5) - bright green -->
+    <path d="M36.2 46.9 L37.3 48.0 L38.0 47.7 L37.7 49.1 L38.1 49.8 L37.5 50.6 L37.9 51.5 L37.2 52.4 L36.7 53.6 L36.2 55.0 L35.6 53.5 L35.0 52.3 L34.3 51.4 L34.7 50.5 L34.2 49.6 L34.6 48.9 L34.3 47.8 L35.0 48.1z" fill="#50c050" opacity="0.85"/>
+    <!-- R lower-mid (path6) - bright green -->
+    <path d="M55.5 47.2 L54.8 48.2 L54.3 47.9 L54.5 49.2 L54.1 49.8 L54.6 50.6 L54.3 51.3 L55.0 52.0 L55.4 52.8 L55.5 53.8 L56.1 52.6 L56.6 51.6 L57.1 50.8 L56.8 50.0 L57.2 49.2 L56.8 48.5 L57.0 47.5 L56.3 47.8z" fill="#55c055" opacity="0.75"/>
+
+    <!-- L lower (path7) - bright teal compound -->
+    <path d="M39.6 49.4 L41.0 50.2 L41.9 49.9 L42.2 50.8 L42.4 51.6 L41.8 52.3 L42.0 53.2 L41.1 53.8 L40.3 54.6 L39.6 55.4 L38.9 54.5 L38.0 53.7 L37.1 53.0 L37.4 52.2 L36.9 51.4 L37.4 50.6 L37.8 49.8 L38.6 50.2z" fill="#2cc88a" opacity="0.80"/>
+    <!-- R lower (path8) - bright yellow-green -->
+    <path d="M51.3 50.7 L50.2 51.3 L49.5 51.0 L49.0 51.8 L48.6 52.5 L49.1 53.2 L48.8 53.9 L49.6 54.5 L50.4 55.1 L51.3 55.6 L52.1 55.0 L52.9 54.4 L53.6 53.8 L53.3 53.1 L53.8 52.3 L53.3 51.7 L52.8 51.1 L52.1 51.4z" fill="#70c050" opacity="0.75"/>
+
+    <!-- Bottom-L (path9) - teal-green fan -->
+    <path d="M37.8 54.0 L36.5 54.5 L35.0 54.7 L34.2 55.3 L33.8 56.0 L34.7 56.7 L36.0 57.2 L37.0 57.6 L37.8 58.2 L38.6 57.5 L39.7 57.0 L40.8 56.5 L41.6 55.8 L41.2 55.1 L40.3 54.5 L38.8 54.3z" fill="#3aaa60" opacity="0.75"/>
+    <!-- Bottom-R (path10) - medium green fan -->
+    <path d="M54.7 53.0 L56.2 53.5 L57.8 53.6 L58.7 54.3 L59.1 55.1 L58.1 55.8 L56.7 56.3 L55.6 56.8 L54.7 57.5 L53.8 56.7 L52.6 56.2 L51.3 55.7 L50.3 55.0 L50.7 54.2 L51.7 53.5 L53.2 53.4z" fill="#30a860" opacity="0.80"/>
+
+    <!-- Center (path11) - bright emerald -->
+    <path d="M46.1 54.1 L46.8 54.6 L47.3 55.3 L47.4 55.9 L46.9 56.7 L46.5 57.3 L46.1 57.7 L45.7 57.2 L45.2 56.6 L44.8 55.8 L44.9 55.2 L45.4 54.5z" fill="#30e890" opacity="0.80"/>
+
+    <!-- Outer-L (path12) - light sage -->
+    <path d="M40.1 56.5 L38.9 56.8 L38.0 56.6 L37.2 57.2 L36.9 57.8 L37.5 58.4 L38.6 58.8 L39.5 59.2 L40.1 59.9 L40.7 59.2 L41.6 58.8 L42.7 58.4 L43.3 57.8 L43.0 57.2 L42.2 56.6 L41.3 56.8z" fill="#6ab870" opacity="0.77"/>
+    <!-- Outer-R (path13) - light sage -->
+    <path d="M51.8 56.0 L52.8 56.3 L53.5 56.1 L54.2 56.7 L54.5 57.3 L53.9 57.9 L53.0 58.3 L52.2 58.7 L51.8 59.3 L51.2 58.6 L50.4 58.2 L49.6 57.8 L49.0 57.2 L49.3 56.6 L50.1 56.0 L50.9 56.3z" fill="#5aac68" opacity="0.73"/>
+
+    <!-- Extra leaves - upper branches -->
+    <!-- L branch small ovate -->
+    <path d="M25.5 41.2 L26.2 42.0 L26.6 41.8 L26.4 42.8 L26.7 43.3 L26.2 43.9 L26.5 44.5 L25.9 45.0 L25.5 45.8 L25.1 44.9 L24.8 44.3 L24.5 43.8 L24.7 43.1 L24.4 42.5 L24.8 41.8 L25.0 41.3z" fill="#4cc050" opacity="0.75"/>
+    <!-- R branch small ovate -->
+    <path d="M66.5 41.2 L65.8 42.0 L65.4 41.8 L65.6 42.8 L65.3 43.3 L65.8 43.9 L65.5 44.5 L66.1 45.0 L66.5 45.8 L66.9 44.9 L67.2 44.3 L67.5 43.8 L67.3 43.1 L67.6 42.5 L67.2 41.8 L67.0 41.3z" fill="#60b840" opacity="0.73"/>
+    <!-- L inner small leaf -->
+    <path d="M33.0 50.5 L33.6 51.2 L34.0 51.0 L33.8 51.8 L34.1 52.3 L33.6 52.8 L33.8 53.3 L33.3 53.7 L33.0 54.3 L32.6 53.6 L32.3 53.1 L32.0 52.6 L32.3 52.0 L32.0 51.5 L32.3 50.9 L32.5 50.5z" fill="#38c468" opacity="0.73"/>
+    <!-- R inner small leaf -->
+    <path d="M58.5 50.5 L57.9 51.2 L57.5 51.0 L57.7 51.8 L57.4 52.3 L57.9 52.8 L57.7 53.3 L58.2 53.7 L58.5 54.3 L58.9 53.6 L59.2 53.1 L59.5 52.6 L59.2 52.0 L59.5 51.5 L59.2 50.9 L59.0 50.5z" fill="#50b850" opacity="0.70"/>
+
+    <!-- Seed buds at wreath tips -->
+    <circle cx="20" cy="34.5" r="0.7" fill="#27ae60" opacity="0.48"/>
+    <circle cx="19.5" cy="33.8" r="0.45" fill="#2ecc71" opacity="0.4"/>
+    <circle cx="72" cy="34.5" r="0.7" fill="#27ae60" opacity="0.48"/>
+    <circle cx="72.5" cy="33.8" r="0.45" fill="#2ecc71" opacity="0.4"/>
+    <!-- Seed buds along branches -->
+    <circle cx="24" cy="40" r="0.35" fill="#2ecc71" opacity="0.32"/>
+    <circle cx="30" cy="47.5" r="0.35" fill="#2ecc71" opacity="0.3"/>
+    <circle cx="33.5" cy="49" r="0.3" fill="#27ae60" opacity="0.26"/>
+    <circle cx="35" cy="51" r="0.3" fill="#27ae60" opacity="0.28"/>
+    <circle cx="38.5" cy="53" r="0.25" fill="#2ecc71" opacity="0.22"/>
+    <circle cx="42" cy="55.5" r="0.25" fill="#27ae60" opacity="0.2"/>
+    <circle cx="67" cy="40" r="0.35" fill="#2ecc71" opacity="0.32"/>
+    <circle cx="61" cy="47.5" r="0.35" fill="#2ecc71" opacity="0.3"/>
+    <circle cx="57.5" cy="49" r="0.3" fill="#27ae60" opacity="0.26"/>
+    <circle cx="56" cy="51" r="0.3" fill="#27ae60" opacity="0.28"/>
+    <circle cx="52.5" cy="53" r="0.25" fill="#2ecc71" opacity="0.22"/>
+    <circle cx="49" cy="55.5" r="0.25" fill="#27ae60" opacity="0.2"/>
+
+  </g>
+
+  <!-- Decorative Laurel Overlay - vines, leaves, berries, ribbon -->
+  <g id="ld">
+    <!-- Left vine scrollwork -->
+    <path d="M28 56 C24 52 20 47 21 41 C22 37 25 35 27 37" fill="none" stroke="#15824a" stroke-width="0.7" stroke-linecap="round"/>
+    <path d="M30 55 C27 51 24 48 25 43 C26 40 28 39 29 41" fill="none" stroke="#22a862" stroke-width="0.5" stroke-linecap="round"/>
+    <!-- Left tendrils -->
+    <path d="M21 41 C19 39 18 36 19 34" fill="none" stroke="#1a9e5a" stroke-width="0.35" stroke-linecap="round"/>
+    <path d="M24 45 C22 44 20 42 21 40" fill="none" stroke="#1a9e5a" stroke-width="0.3" stroke-linecap="round"/>
+    <path d="M27 37 C28 35 27 33 26 32" fill="none" stroke="#22a862" stroke-width="0.3" stroke-linecap="round"/>
+    <path d="M19 34 C18 33 17.5 32 18 31" fill="none" stroke="#1a9e5a" stroke-width="0.25" stroke-linecap="round"/>
+    <!-- Left leaves (serrated, lobed, toothed varieties) -->
+    <!-- Serrated pointed leaf -->
+    <path d="M22 43 L21.2 41.8 L20.6 42 L20.3 40.8 L19.8 41 L20.2 39.8 L21 39 L22 38.6 L23 39 L23.8 39.8 L24.2 41 L23.7 40.8 L23.4 42 L22.8 41.8z" fill="#1a9e5a" opacity="0.65"/>
+    <!-- Tri-lobed leaf -->
+    <path d="M25 47 L24.5 46 L23.5 46 L23 45 L23 44 L24 43.5 L24.5 43 L25 43.5 L25.5 43 L26 43.5 L27 44 L27 45 L26.5 46 L25.5 46z" fill="#22a862" opacity="0.55"/>
+    <!-- Deeply toothed lance -->
+    <path d="M23 39.5 L22.2 38.2 L21.5 38.5 L21.2 37.2 L20.8 37.5 L21 36.2 L21.5 35.5 L22.2 35 L23 35.2 L24 35.5 L24.5 36.2 L24.8 37.5 L24.2 37.2 L24 38.5 L23.5 38.2z" fill="#15824a" opacity="0.6"/>
+    <!-- Fan palmate leaf -->
+    <path d="M20 44.5 L19 43 L18.2 43.3 L18 42 L18.2 41 L19 40.5 L19.5 40 L20.5 40 L21.5 40.5 L22 41.5 L21.8 42.5 L21 43z" fill="#1a9e5a" opacity="0.5"/>
+    <!-- Small toothed leaf -->
+    <path d="M27 50 L26.3 49 L25.8 49.2 L25.7 48 L26.2 47.5 L27 47 L27.8 47.5 L28.2 48.2 L28 49.2 L27.5 49z" fill="#22a862" opacity="0.45"/>
+    <!-- Small asymmetric toothed -->
+    <path d="M19.5 37 L18.8 36 L18.2 36.2 L18 35 L18.3 34.2 L19 33.6 L19.8 33.6 L20.5 34 L21 34.8 L20.8 35.5 L20.5 36 L20 36.3z" fill="#1a9e5a" opacity="0.5"/>
+    <!-- Left berry clusters -->
+    <circle cx="21" cy="40" r="0.55" fill="#c0392b" opacity="0.45"/>
+    <circle cx="22" cy="39.3" r="0.4" fill="#e74c3c" opacity="0.4"/>
+    <circle cx="21.5" cy="40.6" r="0.35" fill="#a93226" opacity="0.35"/>
+    <circle cx="25" cy="44" r="0.5" fill="#c0392b" opacity="0.4"/>
+    <circle cx="25.7" cy="43.4" r="0.35" fill="#e74c3c" opacity="0.35"/>
+    <circle cx="19" cy="36" r="0.4" fill="#c0392b" opacity="0.35"/>
+
+    <!-- Right vine scrollwork (mirror) -->
+    <path d="M64 56 C68 52 72 47 71 41 C70 37 67 35 65 37" fill="none" stroke="#15824a" stroke-width="0.7" stroke-linecap="round"/>
+    <path d="M62 55 C65 51 68 48 67 43 C66 40 64 39 63 41" fill="none" stroke="#22a862" stroke-width="0.5" stroke-linecap="round"/>
+    <!-- Right tendrils -->
+    <path d="M71 41 C73 39 74 36 73 34" fill="none" stroke="#1a9e5a" stroke-width="0.35" stroke-linecap="round"/>
+    <path d="M68 45 C70 44 72 42 71 40" fill="none" stroke="#1a9e5a" stroke-width="0.3" stroke-linecap="round"/>
+    <path d="M65 37 C64 35 65 33 66 32" fill="none" stroke="#22a862" stroke-width="0.3" stroke-linecap="round"/>
+    <path d="M73 34 C74 33 74.5 32 74 31" fill="none" stroke="#1a9e5a" stroke-width="0.25" stroke-linecap="round"/>
+    <!-- Right leaves (mirrored serrated, lobed, toothed varieties) -->
+    <!-- Serrated pointed leaf -->
+    <path d="M70 43 L70.8 41.8 L71.4 42 L71.7 40.8 L72.2 41 L71.8 39.8 L71 39 L70 38.6 L69 39 L68.2 39.8 L67.8 41 L68.3 40.8 L68.6 42 L69.2 41.8z" fill="#1a9e5a" opacity="0.65"/>
+    <!-- Tri-lobed leaf -->
+    <path d="M67 47 L67.5 46 L68.5 46 L69 45 L69 44 L68 43.5 L67.5 43 L67 43.5 L66.5 43 L66 43.5 L65 44 L65 45 L65.5 46 L66.5 46z" fill="#22a862" opacity="0.55"/>
+    <!-- Deeply toothed lance -->
+    <path d="M69 39.5 L69.8 38.2 L70.5 38.5 L70.8 37.2 L71.2 37.5 L71 36.2 L70.5 35.5 L69.8 35 L69 35.2 L68 35.5 L67.5 36.2 L67.2 37.5 L67.8 37.2 L68 38.5 L68.5 38.2z" fill="#15824a" opacity="0.6"/>
+    <!-- Fan palmate leaf -->
+    <path d="M72 44.5 L73 43 L73.8 43.3 L74 42 L73.8 41 L73 40.5 L72.5 40 L71.5 40 L70.5 40.5 L70 41.5 L70.2 42.5 L71 43z" fill="#1a9e5a" opacity="0.5"/>
+    <!-- Small toothed leaf -->
+    <path d="M65 50 L65.7 49 L66.2 49.2 L66.3 48 L65.8 47.5 L65 47 L64.2 47.5 L63.8 48.2 L64 49.2 L64.5 49z" fill="#22a862" opacity="0.45"/>
+    <!-- Small asymmetric toothed -->
+    <path d="M72.5 37 L73.2 36 L73.8 36.2 L74 35 L73.7 34.2 L73 33.6 L72.2 33.6 L71.5 34 L71 34.8 L71.2 35.5 L71.5 36 L72 36.3z" fill="#1a9e5a" opacity="0.5"/>
+    <!-- Right berry clusters -->
+    <circle cx="71" cy="40" r="0.55" fill="#c0392b" opacity="0.45"/>
+    <circle cx="70" cy="39.3" r="0.4" fill="#e74c3c" opacity="0.4"/>
+    <circle cx="70.5" cy="40.6" r="0.35" fill="#a93226" opacity="0.35"/>
+    <circle cx="67" cy="44" r="0.5" fill="#c0392b" opacity="0.4"/>
+    <circle cx="66.3" cy="43.4" r="0.35" fill="#e74c3c" opacity="0.35"/>
+    <circle cx="73" cy="36" r="0.4" fill="#c0392b" opacity="0.35"/>
+
+    <!-- Bottom ribbon with bow -->
+    <path d="M37 57 Q46 53.5 55 57" fill="none" stroke="#daa520" stroke-width="0.65" opacity="0.35"/>
+    <path d="M35 58 Q46 54.5 57 58" fill="none" stroke="#b8860b" stroke-width="0.45" opacity="0.25"/>
+    <path d="M39 57.5 Q46 55 53 57.5" fill="none" stroke="#c9a400" stroke-width="0.35" opacity="0.3"/>
+    <!-- Ribbon bow -->
+    <path d="M44.5 56 C45.5 58.5 47 58.5 46 56 C47 58.5 48.5 58.5 47.5 56" fill="none" stroke="#c9a400" stroke-width="0.4" opacity="0.4"/>
+    <circle cx="46" cy="56.5" r="0.5" fill="#daa520" opacity="0.3"/>
+    <!-- Ribbon tails -->
+    <path d="M39 57.5 L37 59 L38 58" fill="none" stroke="#b8860b" stroke-width="0.3" opacity="0.25"/>
+    <path d="M53 57.5 L55 59 L54 58" fill="none" stroke="#b8860b" stroke-width="0.3" opacity="0.25"/>
+
+    <!-- Gold accent stars at wreath tips -->
+    <path d="M19 35 l0.5 1 1.1 0.15 -0.85 0.75 0.2 1.1 -0.95 -0.55 -0.95 0.55 0.2 -1.1 -0.85 -0.75 1.1 -0.15z" fill="#ffd700" opacity="0.3"/>
+    <path d="M73 35 l0.5 1 1.1 0.15 -0.85 0.75 0.2 1.1 -0.95 -0.55 -0.95 0.55 0.2 -1.1 -0.85 -0.75 1.1 -0.15z" fill="#ffd700" opacity="0.3"/>
+
+    <!-- Small gold accent dots along wreath body -->
+    <circle cx="30" cy="39.5" r="0.35" fill="#ffd700" opacity="0.22"/>
+    <circle cx="62" cy="39.5" r="0.35" fill="#ffd700" opacity="0.22"/>
+    <circle cx="35" cy="38" r="0.3" fill="#ffd700" opacity="0.18"/>
+    <circle cx="57" cy="38" r="0.3" fill="#ffd700" opacity="0.18"/>
+    <circle cx="40" cy="37.5" r="0.25" fill="#ffd700" opacity="0.15"/>
+    <circle cx="52" cy="37.5" r="0.25" fill="#ffd700" opacity="0.15"/>
+    <circle cx="46" cy="37" r="0.3" fill="#ffd700" opacity="0.2"/>
+  </g>
+
+  <!-- ===== Aurora Laurel Wreath (S-rank) ===== -->
+  <radialGradient id="g-au-laurel-glow" cx="50%" cy="45%" r="55%">
+    <stop offset="0%" stop-color="#00e5b0" stop-opacity="0.1"/>
+    <stop offset="50%" stop-color="#00bfff" stop-opacity="0.05"/>
+    <stop offset="100%" stop-color="#9370db" stop-opacity="0"/>
+  </radialGradient>
+  <g id="lp-au">
+    <!-- Aurora wreath base layer -->
+    <g class="au-wreath-main" transform="translate(20.000000,60.000000) scale(0.00400000,-0.00400000)" fill="#00b8a0" stroke="none" opacity="0.85" filter="url(#f-au-laurel)">
+<path d="M200 5103 c0 -2 18 -40 41 -84 47 -95 62 -132 50 -125 -15 10 -18 -39 -6 -87 31 -121 265 -468 412 -608 124 -119 281 -222 383 -251 36 -10 49 -16 30 -13 -19 3 -78 12 -130 20 -117 17 -353 35 -477 35 l-93 0 53 -82 c72 -112 72 -112 59 -104 -18 11 -26 -41 -13 -84 25 -84 261 -376 404 -502 95 -83 222 -168 304 -205 98 -43 194 -73 242 -74 l46 -1 -45 -8 c-25 -5 -124 -21 -220 -36 -96 -15 -177 -29 -180 -31 -2 -2 0 -7 5 -11 27 -19 138 -144 123 -139 -18 6 -28 -10 -28 -47 0 -38 53 -108 141 -187 349 -313 631 -450 939 -453 63 0 131 2 150 7 19 4 -35 -17 -120 -46 -236 -82 -310 -110 -310 -117 0 -3 29 -28 65 -54 55 -40 102 -84 67 -62 -13 8 -32 -24 -32 -54 0 -99 486 -361 790 -426 125 -27 327 -25 444 4 113 28 261 98 309 145 39 40 56 92 38 124 -8 17 -4 24 29 49 22 16 40 32 40 36 0 4 -26 40 -58 80 -162 203 -368 328 -608 369 -89 15 -368 6 -474 -15 -131 -26 -147 -26 -59 -3 51 13 102 34 122 50 38 29 61 84 51 123 -5 18 1 26 25 39 17 8 31 19 31 23 0 4 -16 38 -35 75 -163 317 -424 501 -781 548 -113 15 -127 19 -91 30 51 14 84 58 89 118 1 20 9 33 20 37 23 7 23 6 -12 114 -108 329 -305 534 -640 662 -41 15 -59 25 -40 21 19 -5 82 -8 140 -8 81 0 113 4 142 18 39 20 73 76 65 107 -3 12 2 20 14 23 23 6 23 21 4 124 -61 320 -249 568 -544 718 -157 79 -394 147 -666 190 -88 13 -170 26 -182 29 -13 2 -23 2 -23 -1z"/>
+<path d="M12550 5099 c-232 -36 -334 -55 -445 -84 -484 -122 -761 -346 -880 -712 -26 -79 -57 -242 -48 -255 2 -5 14 -8 26 -9 12 0 16 -3 10 -6 -17 -6 -16 -38 2 -72 25 -49 75 -66 200 -66 61 0 124 4 140 8 17 5 -13 -9 -66 -31 -136 -55 -250 -126 -341 -211 -128 -120 -217 -263 -272 -439 -32 -101 -32 -110 -3 -122 12 -5 17 -9 11 -9 -8 -1 -9 -12 -5 -34 15 -66 41 -95 94 -107 31 -7 31 -7 7 -12 -14 -3 -72 -13 -130 -22 -322 -51 -553 -206 -714 -479 -25 -42 -52 -92 -60 -111 -14 -33 -14 -33 23 -54 20 -12 31 -22 26 -22 -15 0 -17 -39 -4 -78 14 -42 76 -88 130 -97 22 -4 39 -9 36 -11 -2 -2 -55 3 -118 12 -154 22 -395 15 -494 -13 -216 -62 -391 -184 -545 -380 l-41 -52 40 -32 c34 -27 39 -35 30 -51 -17 -33 -1 -85 38 -125 48 -47 196 -117 309 -145 117 -29 319 -31 444 -4 300 64 790 328 790 425 0 29 -18 63 -31 56 -5 -4 -9 -4 -9 -2 0 3 34 29 75 59 41 29 75 56 75 59 0 3 -21 13 -47 22 -349 120 -422 146 -388 140 59 -12 241 -8 310 6 208 43 437 158 636 322 241 199 314 293 265 342 -13 12 -6 24 51 86 36 40 64 73 62 75 -4 2 -107 20 -359 60 -70 12 -77 14 -39 15 48 1 144 31 241 74 139 62 318 202 451 352 104 117 225 279 249 333 21 47 21 99 0 94 -16 -3 -10 9 58 116 l50 77 -72 3 c-91 4 -362 -14 -488 -33 -179 -26 -179 -26 -116 -9 93 26 244 120 365 230 193 174 467 605 443 696 -2 10 -8 15 -13 12 -12 -7 3 30 51 126 23 45 40 85 38 89 -2 4 -23 4 -48 0z m-933 -1185 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-1290 -1860 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m40 -10 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z"/>
+<path d="M10242 4632 c-46 -140 -92 -319 -118 -457 -18 -94 -28 -519 -12 -509 4 3 5 -8 2 -25 -8 -40 21 -179 58 -274 75 -195 297 -437 400 -437 57 0 124 70 177 185 53 112 67 224 65 510 -1 120 -5 166 -23 233 -66 252 -206 515 -423 795 -39 51 -74 95 -77 99 -4 4 -26 -50 -49 -120z"/>
+<path d="M2407 4612 c-305 -408 -443 -757 -422 -1067 3 -55 8 -140 10 -190 5 -113 30 -204 83 -293 44 -74 88 -118 128 -128 102 -26 339 218 422 433 34 87 67 235 58 258 -3 9 -1 39 5 68 5 28 10 117 10 197 1 155 -15 284 -57 455 -33 137 -117 405 -126 405 -5 0 -55 -62 -111 -138z"/>
+<path d="M2970 3839 c-189 -385 -254 -632 -248 -941 2 -86 6 -151 10 -145 5 7 5 -2 2 -19 -19 -98 77 -354 181 -487 76 -96 141 -120 210 -77 70 43 195 240 239 375 20 63 46 197 40 207 -3 4 0 54 6 111 26 257 -51 553 -240 922 -42 83 -87 165 -98 184 l-21 35 -81 -165z"/>
+<path d="M9711 3929 c-124 -219 -230 -466 -276 -642 -39 -151 -47 -234 -41 -426 7 -237 39 -357 136 -517 136 -225 233 -251 355 -97 94 121 171 313 181 453 2 36 8 111 13 167 26 288 -56 600 -266 1017 l-60 120 -42 -75z"/>
+<path d="M3645 3278 c-2 -7 -14 -78 -27 -158 -19 -123 -22 -188 -23 -430 -2 -309 7 -401 50 -555 66 -232 204 -430 388 -552 120 -80 189 -70 245 34 36 69 74 205 78 283 1 30 5 109 9 175 9 135 -1 213 -41 339 -66 208 -198 406 -429 645 -147 152 -244 237 -250 219z"/>
+<path d="M8994 3143 c-289 -284 -435 -492 -514 -732 -32 -100 -55 -261 -45 -330 3 -25 8 -91 10 -146 7 -168 66 -347 129 -387 77 -48 196 11 347 170 94 98 156 199 205 331 37 99 67 234 59 262 -4 11 -2 19 5 19 8 0 10 8 7 21 -3 11 1 77 10 147 10 89 13 172 9 277 -7 191 -48 515 -65 515 -3 0 -74 -66 -157 -147z"/>
+<path d="M4501 2358 c52 -129 69 -179 59 -173 -6 4 -10 -12 -10 -42 0 -78 115 -313 252 -514 215 -317 529 -509 832 -509 124 0 166 27 180 112 1 11 8 23 15 27 10 7 11 27 2 98 -66 545 -401 836 -1164 1012 -97 23 -179 41 -182 41 -3 0 5 -24 16 -52z"/>
+<path d="M8159 2375 c-609 -138 -940 -344 -1096 -683 -59 -127 -110 -377 -88 -429 5 -10 10 -29 12 -42 13 -75 59 -101 179 -101 316 0 625 196 854 543 110 165 222 395 228 465 3 40 2 53 -7 48 -11 -7 -3 15 53 153 28 68 31 81 19 80 -5 0 -74 -16 -154 -34z"/>
+<path d="M4032 1479 c-193 -25 -435 -124 -667 -274 -108 -69 -314 -218 -315 -226 0 -4 28 -16 63 -29 66 -24 92 -40 65 -40 -10 0 -19 -12 -23 -30 -14 -65 45 -105 226 -154 572 -155 982 -93 1270 194 75 74 101 131 81 174 -9 21 -6 31 29 77 21 29 39 55 39 58 0 3 -25 24 -55 46 -229 167 -469 236 -713 204z"/>
+<path d="M8513 1476 c-155 -30 -317 -101 -446 -196 l-67 -50 40 -54 c37 -49 40 -56 29 -80 -21 -46 4 -101 80 -176 288 -287 698 -349 1270 -194 180 49 240 89 226 153 -3 16 -14 31 -23 33 -9 2 18 18 61 35 l79 30 -126 92 c-304 223 -550 347 -780 395 -113 23 -257 28 -343 12z"/>
+<path d="M6324 1249 c-48 -14 -120 -83 -139 -134 -13 -34 -16 -60 -11 -112 4 -37 6 -84 6 -103 -2 -95 62 -193 145 -220 138 -46 285 52 292 195 1 28 8 71 14 97 10 37 10 60 0 101 -31 139 -167 217 -307 176z"/>
+<path d="M5255 1054 c-276 -46 -587 -227 -935 -541 l-54 -50 74 -23 c41 -13 67 -25 58 -27 -23 -6 -34 -48 -20 -78 16 -35 75 -61 188 -84 568 -115 968 -37 1250 243 69 69 110 130 114 171 5 42 0 66 -12 59 -12 -8 -12 -7 39 73 18 29 33 56 33 62 0 15 -49 46 -147 95 -207 104 -386 135 -588 100z"/>
+<path d="M7249 1054 c-42 -7 -109 -25 -150 -40 -76 -27 -226 -101 -267 -133 l-24 -18 41 -66 c22 -37 36 -67 31 -67 -18 0 -11 -80 11 -121 11 -22 53 -73 92 -113 279 -282 682 -361 1251 -245 113 23 172 49 188 84 14 30 3 72 -20 77 -9 3 18 15 61 29 l78 24 -93 81 c-362 313 -622 460 -902 509 -106 18 -194 18 -297 -1z"/>
+    </g>
+    <!-- Color-shift overlay layer (purple tint, animated) -->
+    <g class="au-wreath-overlay" transform="translate(20.000000,60.000000) scale(0.00400000,-0.00400000)" fill="#9370db" stroke="none" opacity="0.15">
+<path d="M200 5103 c0 -2 18 -40 41 -84 47 -95 62 -132 50 -125 -15 10 -18 -39 -6 -87 31 -121 265 -468 412 -608 124 -119 281 -222 383 -251 36 -10 49 -16 30 -13 -19 3 -78 12 -130 20 -117 17 -353 35 -477 35 l-93 0 53 -82 c72 -112 72 -112 59 -104 -18 11 -26 -41 -13 -84 25 -84 261 -376 404 -502 95 -83 222 -168 304 -205 98 -43 194 -73 242 -74 l46 -1 -45 -8 c-25 -5 -124 -21 -220 -36 -96 -15 -177 -29 -180 -31 -2 -2 0 -7 5 -11 27 -19 138 -144 123 -139 -18 6 -28 -10 -28 -47 0 -38 53 -108 141 -187 349 -313 631 -450 939 -453 63 0 131 2 150 7 19 4 -35 -17 -120 -46 -236 -82 -310 -110 -310 -117 0 -3 29 -28 65 -54 55 -40 102 -84 67 -62 -13 8 -32 -24 -32 -54 0 -99 486 -361 790 -426 125 -27 327 -25 444 4 113 28 261 98 309 145 39 40 56 92 38 124 -8 17 -4 24 29 49 22 16 40 32 40 36 0 4 -26 40 -58 80 -162 203 -368 328 -608 369 -89 15 -368 6 -474 -15 -131 -26 -147 -26 -59 -3 51 13 102 34 122 50 38 29 61 84 51 123 -5 18 1 26 25 39 17 8 31 19 31 23 0 4 -16 38 -35 75 -163 317 -424 501 -781 548 -113 15 -127 19 -91 30 51 14 84 58 89 118 1 20 9 33 20 37 23 7 23 6 -12 114 -108 329 -305 534 -640 662 -41 15 -59 25 -40 21 19 -5 82 -8 140 -8 81 0 113 4 142 18 39 20 73 76 65 107 -3 12 2 20 14 23 23 6 23 21 4 124 -61 320 -249 568 -544 718 -157 79 -394 147 -666 190 -88 13 -170 26 -182 29 -13 2 -23 2 -23 -1z"/>
+<path d="M12550 5099 c-232 -36 -334 -55 -445 -84 -484 -122 -761 -346 -880 -712 -26 -79 -57 -242 -48 -255 2 -5 14 -8 26 -9 12 0 16 -3 10 -6 -17 -6 -16 -38 2 -72 25 -49 75 -66 200 -66 61 0 124 4 140 8 17 5 -13 -9 -66 -31 -136 -55 -250 -126 -341 -211 -128 -120 -217 -263 -272 -439 -32 -101 -32 -110 -3 -122 12 -5 17 -9 11 -9 -8 -1 -9 -12 -5 -34 15 -66 41 -95 94 -107 31 -7 31 -7 7 -12 -14 -3 -72 -13 -130 -22 -322 -51 -553 -206 -714 -479 -25 -42 -52 -92 -60 -111 -14 -33 -14 -33 23 -54 20 -12 31 -22 26 -22 -15 0 -17 -39 -4 -78 14 -42 76 -88 130 -97 22 -4 39 -9 36 -11 -2 -2 -55 3 -118 12 -154 22 -395 15 -494 -13 -216 -62 -391 -184 -545 -380 l-41 -52 40 -32 c34 -27 39 -35 30 -51 -17 -33 -1 -85 38 -125 48 -47 196 -117 309 -145 117 -29 319 -31 444 -4 300 64 790 328 790 425 0 29 -18 63 -31 56 -5 -4 -9 -4 -9 -2 0 3 34 29 75 59 41 29 75 56 75 59 0 3 -21 13 -47 22 -349 120 -422 146 -388 140 59 -12 241 -8 310 6 208 43 437 158 636 322 241 199 314 293 265 342 -13 12 -6 24 51 86 36 40 64 73 62 75 -4 2 -107 20 -359 60 -70 12 -77 14 -39 15 48 1 144 31 241 74 139 62 318 202 451 352 104 117 225 279 249 333 21 47 21 99 0 94 -16 -3 -10 9 58 116 l50 77 -72 3 c-91 4 -362 -14 -488 -33 -179 -26 -179 -26 -116 -9 93 26 244 120 365 230 193 174 467 605 443 696 -2 10 -8 15 -13 12 -12 -7 3 30 51 126 23 45 40 85 38 89 -2 4 -23 4 -48 0z m-933 -1185 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-1290 -1860 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m40 -10 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z"/>
+    </g>
+    <!-- === Aurora colored leaf overlays - randomized, different leaves than regular === -->
+
+    <!-- L upper (path2) - bright cyan -->
+    <path d="M30.4 39.5 L31.4 40.7 L32.0 40.4 L31.7 41.8 L32.1 42.5 L31.5 43.3 L31.9 44.2 L31.2 44.9 L30.7 46.0 L30.4 47.3 L29.8 46.0 L29.3 44.8 L28.8 44.0 L29.2 43.2 L28.7 42.3 L29.1 41.5 L28.9 40.4 L29.5 40.7z" fill="#44d4cc" opacity="0.77"/>
+    <!-- R upper (path1) - lighter violet -->
+    <path d="M62.5 41.3 L61.5 42.5 L60.8 42.2 L61.1 43.6 L60.6 44.4 L61.2 45.3 L60.8 46.4 L61.4 47.2 L61.9 48.3 L62.5 49.5 L63.0 48.2 L63.5 47.1 L64.1 46.2 L63.7 45.2 L64.2 44.3 L63.8 43.4 L64.0 42.3 L63.3 42.6z" fill="#a888e8" opacity="0.83"/>
+
+    <!-- L mid (path3) - bright cyan -->
+    <path d="M31.5 43.4 L32.2 44.4 L32.8 44.2 L32.6 45.3 L33.0 46.0 L32.5 46.8 L32.8 47.5 L32.3 48.2 L31.9 49.1 L31.5 50.8 L31.1 49.0 L30.6 48.1 L30.2 47.4 L30.6 46.7 L30.1 46.0 L30.4 45.2 L30.2 44.1 L30.8 44.4z" fill="#33d4ff" opacity="0.80"/>
+    <!-- R mid (path4) - soft violet -->
+    <path d="M59.0 44.5 L58.2 45.5 L57.6 45.2 L57.9 46.5 L57.4 47.2 L58.0 48.0 L57.7 48.8 L58.3 49.4 L58.7 50.3 L59.0 51.5 L59.5 50.2 L60.0 49.2 L60.5 48.4 L60.2 47.5 L60.6 46.7 L60.2 45.9 L60.4 44.9 L59.8 45.3z" fill="#b080e8" opacity="0.75"/>
+
+    <!-- L lower-mid (path5) - bright teal -->
+    <path d="M36.5 45.6 L37.5 46.7 L38.1 46.5 L37.8 47.8 L38.3 48.4 L37.7 49.3 L38.0 50.2 L37.3 50.9 L36.9 52.0 L36.5 53.2 L36.0 51.9 L35.4 50.8 L34.8 50.0 L35.1 49.2 L34.6 48.3 L35.0 47.6 L34.8 46.4 L35.4 46.7z" fill="#33f0c0" opacity="0.77"/>
+    <!-- R lower-mid (path6) - lighter lavender -->
+    <path d="M55.9 46.7 L55.0 47.8 L54.4 47.5 L54.7 48.9 L54.2 49.5 L54.7 50.4 L54.4 51.2 L55.0 52.0 L55.4 53.1 L55.9 54.4 L56.4 53.0 L56.9 51.9 L57.5 51.1 L57.1 50.3 L57.6 49.4 L57.2 48.7 L57.4 47.6 L56.8 47.9z" fill="#9080f0" opacity="0.75"/>
+
+    <!-- L lower (path7) - bright teal compound -->
+    <path d="M40.2 49.8 L41.5 50.5 L42.3 50.2 L42.6 51.1 L42.8 51.8 L42.2 52.5 L42.5 53.3 L41.7 53.9 L41.0 54.6 L40.2 55.3 L39.5 54.5 L38.7 53.7 L37.9 53.0 L38.2 52.3 L37.7 51.5 L38.2 50.8 L38.5 50.1 L39.3 50.4z" fill="#40e0c0" opacity="0.73"/>
+    <!-- R lower (path8) - lighter orchid -->
+    <path d="M50.0 49.2 L48.6 50.0 L47.7 49.6 L47.2 50.6 L46.7 51.4 L47.3 52.3 L47.0 53.2 L47.9 53.9 L48.9 54.6 L50.0 55.3 L51.0 54.5 L52.0 53.8 L52.8 53.0 L52.5 52.1 L53.1 51.2 L52.5 50.4 L52.0 49.7 L51.2 50.1z" fill="#d4a0ff" opacity="0.73"/>
+
+    <!-- Bottom-L (path9) - brighter cyan fan -->
+    <path d="M36.4 54.4 L35.0 54.9 L33.3 55.1 L32.4 55.8 L32.0 56.5 L33.0 57.3 L34.4 57.8 L35.5 58.2 L36.4 58.9 L37.2 58.1 L38.5 57.7 L39.8 57.2 L40.7 56.4 L40.3 55.7 L39.3 55.0 L37.7 54.8z" fill="#44d4ff" opacity="0.70"/>
+    <!-- Bottom-R (path10) - orchid fan -->
+    <path d="M55.2 53.5 L56.5 54.0 L58.0 54.1 L58.9 54.8 L59.2 55.5 L58.3 56.2 L57.0 56.7 L55.9 57.1 L55.2 57.8 L54.4 57.1 L53.2 56.6 L52.0 56.1 L51.2 55.4 L51.6 54.7 L52.5 54.0 L53.8 53.9z" fill="#c088e8" opacity="0.70"/>
+
+    <!-- Center (path11) - brighter teal-blue -->
+    <path d="M45.0 54.5 L45.8 55.1 L46.4 55.8 L46.4 56.5 L45.9 57.3 L45.5 58.0 L45.0 58.4 L44.5 57.9 L44.0 57.2 L43.6 56.4 L43.7 55.7 L44.2 55.0z" fill="#30d0e8" opacity="0.77"/>
+
+    <!-- Outer-L (path12) - cyan-blue -->
+    <path d="M40.5 55.8 L39.4 56.1 L38.6 55.9 L37.8 56.5 L37.5 57.1 L38.1 57.7 L39.1 58.1 L40.0 58.5 L40.5 59.2 L41.1 58.5 L41.9 58.0 L42.9 57.6 L43.5 57.0 L43.2 56.4 L42.4 55.8 L41.5 56.1z" fill="#50c8e0" opacity="0.70"/>
+    <!-- Outer-R (path13) - lighter pink -->
+    <path d="M51.3 55.1 L52.3 55.4 L53.1 55.2 L54.0 55.9 L54.3 56.6 L53.6 57.2 L52.7 57.6 L51.9 58.1 L51.3 58.8 L50.7 58.0 L49.8 57.5 L48.9 57.1 L48.3 56.5 L48.7 55.8 L49.5 55.1 L50.4 55.4z" fill="#e890e4" opacity="0.70"/>
+
+    <!-- Glowing seed buds at tips -->
+    <circle cx="20" cy="34.5" r="0.75" fill="#00bfff" opacity="0.58"/>
+    <circle cx="19.5" cy="33.8" r="0.55" fill="#00e5b0" opacity="0.48"/>
+    <circle cx="72" cy="34.5" r="0.75" fill="#9370db" opacity="0.58"/>
+    <circle cx="72.5" cy="33.8" r="0.55" fill="#da70d6" opacity="0.48"/>
+    <!-- Extra leaves - aurora branches -->
+    <!-- L branch small teal ovate -->
+    <path d="M26.0 41.5 L26.7 42.3 L27.1 42.1 L26.9 43.0 L27.2 43.5 L26.7 44.1 L27.0 44.7 L26.4 45.2 L26.0 45.9 L25.6 45.1 L25.3 44.5 L25.0 44.0 L25.2 43.3 L24.9 42.7 L25.3 42.0 L25.5 41.5z" fill="#30e8c0" opacity="0.73"/>
+    <!-- R branch small violet ovate -->
+    <path d="M66.0 41.5 L65.3 42.3 L64.9 42.1 L65.1 43.0 L64.8 43.5 L65.3 44.1 L65.0 44.7 L65.6 45.2 L66.0 45.9 L66.4 45.1 L66.7 44.5 L67.0 44.0 L66.8 43.3 L67.1 42.7 L66.7 42.0 L66.5 41.5z" fill="#a070e0" opacity="0.70"/>
+    <!-- L inner small cyan leaf -->
+    <path d="M34.0 50.0 L34.6 50.7 L35.0 50.5 L34.8 51.3 L35.1 51.8 L34.6 52.3 L34.8 52.8 L34.3 53.2 L34.0 53.8 L33.6 53.1 L33.3 52.6 L33.0 52.1 L33.3 51.5 L33.0 51.0 L33.3 50.4 L33.5 50.0z" fill="#44dde8" opacity="0.44"/>
+    <!-- R inner small orchid leaf -->
+    <path d="M58.0 50.0 L57.4 50.7 L57.0 50.5 L57.2 51.3 L56.9 51.8 L57.4 52.3 L57.2 52.8 L57.7 53.2 L58.0 53.8 L58.4 53.1 L58.7 52.6 L59.0 52.1 L58.7 51.5 L59.0 51.0 L58.7 50.4 L58.5 50.0z" fill="#d480d8" opacity="0.42"/>
+
+    <!-- Glowing seed buds along branches -->
+    <circle cx="24" cy="40" r="0.4" fill="#00e5b0" opacity="0.38"/>
+    <circle cx="30" cy="47.5" r="0.4" fill="#00e5b0" opacity="0.4"/>
+    <circle cx="33.5" cy="49" r="0.35" fill="#00bfff" opacity="0.32"/>
+    <circle cx="35" cy="51" r="0.35" fill="#00bfff" opacity="0.35"/>
+    <circle cx="38.5" cy="53" r="0.3" fill="#00e5b0" opacity="0.28"/>
+    <circle cx="42" cy="55.5" r="0.3" fill="#00bfff" opacity="0.25"/>
+    <circle cx="67" cy="40" r="0.4" fill="#da70d6" opacity="0.38"/>
+    <circle cx="61" cy="47.5" r="0.4" fill="#da70d6" opacity="0.4"/>
+    <circle cx="57.5" cy="49" r="0.35" fill="#9370db" opacity="0.32"/>
+    <circle cx="56" cy="51" r="0.35" fill="#9370db" opacity="0.35"/>
+    <circle cx="52.5" cy="53" r="0.3" fill="#da70d6" opacity="0.28"/>
+    <circle cx="49" cy="55.5" r="0.3" fill="#9370db" opacity="0.25"/>
+
+    <!-- Animated aurora sparkles along wreath branches -->
+    <circle class="au-lf-sp au-lf1" cx="22" cy="38" r="0.4" fill="#00e5b0"/>
+    <circle class="au-lf-sp au-lf2" cx="26" cy="43" r="0.35" fill="#00bfff"/>
+    <circle class="au-lf-sp au-lf3" cx="31" cy="47" r="0.3" fill="#66ffdd"/>
+    <circle class="au-lf-sp au-lf4" cx="36" cy="51" r="0.3" fill="#00e5b0"/>
+    <circle class="au-lf-sp au-lf5" cx="41" cy="54" r="0.25" fill="#00bfff"/>
+    <circle class="au-lf-sp au-lf6" cx="70" cy="38" r="0.4" fill="#da70d6"/>
+    <circle class="au-lf-sp au-lf7" cx="66" cy="43" r="0.35" fill="#9370db"/>
+    <circle class="au-lf-sp au-lf8" cx="61" cy="47" r="0.3" fill="#c7a0ff"/>
+    <circle class="au-lf-sp au-lf9" cx="56" cy="51" r="0.3" fill="#da70d6"/>
+    <circle class="au-lf-sp au-lf10" cx="51" cy="54" r="0.25" fill="#9370db"/>
+    <!-- Inner wreath glow halo -->
+    <circle cx="46" cy="45" r="22" fill="url(#g-au-laurel-glow)"/>
+  </g>
+
+  <!-- Aurora Decorative Laurel Overlay (S-rank) -->
+  <g id="ld-au">
+    <!-- Left vine scrollwork (aurora, vibrant) -->
+    <path d="M28 56 C24 52 20 47 21 41 C22 37 25 35 27 37" fill="none" stroke="#00b8a0" stroke-width="0.8" stroke-linecap="round"/>
+    <path d="M30 55 C27 51 24 48 25 43 C26 40 28 39 29 41" fill="none" stroke="#00d4c0" stroke-width="0.6" stroke-linecap="round"/>
+    <!-- Left tendrils -->
+    <path d="M21 41 C19 39 18 36 19 34" fill="none" stroke="#00b8a0" stroke-width="0.4" stroke-linecap="round"/>
+    <path d="M24 45 C22 44 20 42 21 40" fill="none" stroke="#00d4c0" stroke-width="0.35" stroke-linecap="round"/>
+    <path d="M27 37 C28 35 27 33 26 32" fill="none" stroke="#00d4c0" stroke-width="0.35" stroke-linecap="round"/>
+    <path d="M19 34 C18 33 17.5 32 18 31" fill="none" stroke="#00b8a0" stroke-width="0.3" stroke-linecap="round"/>
+    <!-- Left leaves (aurora teal, serrated/lobed varieties) -->
+    <!-- Serrated pointed leaf -->
+    <path d="M22 43 L21.2 41.8 L20.6 42 L20.3 40.8 L19.8 41 L20.2 39.8 L21 39 L22 38.6 L23 39 L23.8 39.8 L24.2 41 L23.7 40.8 L23.4 42 L22.8 41.8z" fill="#00b8a0" opacity="0.75"/>
+    <!-- Tri-lobed leaf -->
+    <path d="M25 47 L24.5 46 L23.5 46 L23 45 L23 44 L24 43.5 L24.5 43 L25 43.5 L25.5 43 L26 43.5 L27 44 L27 45 L26.5 46 L25.5 46z" fill="#00d4c0" opacity="0.65"/>
+    <!-- Deeply toothed lance -->
+    <path d="M23 39.5 L22.2 38.2 L21.5 38.5 L21.2 37.2 L20.8 37.5 L21 36.2 L21.5 35.5 L22.2 35 L23 35.2 L24 35.5 L24.5 36.2 L24.8 37.5 L24.2 37.2 L24 38.5 L23.5 38.2z" fill="#009e88" opacity="0.7"/>
+    <!-- Fan palmate leaf -->
+    <path d="M20 44.5 L19 43 L18.2 43.3 L18 42 L18.2 41 L19 40.5 L19.5 40 L20.5 40 L21.5 40.5 L22 41.5 L21.8 42.5 L21 43z" fill="#00b8a0" opacity="0.6"/>
+    <!-- Small toothed leaf -->
+    <path d="M27 50 L26.3 49 L25.8 49.2 L25.7 48 L26.2 47.5 L27 47 L27.8 47.5 L28.2 48.2 L28 49.2 L27.5 49z" fill="#00d4c0" opacity="0.55"/>
+    <!-- Small asymmetric toothed -->
+    <path d="M19.5 37 L18.8 36 L18.2 36.2 L18 35 L18.3 34.2 L19 33.6 L19.8 33.6 L20.5 34 L21 34.8 L20.8 35.5 L20.5 36 L20 36.3z" fill="#00b8a0" opacity="0.6"/>
+    <!-- Left crystal gems (aurora purple, glowing) -->
+    <circle cx="21" cy="40" r="0.6" fill="#7b68ee" opacity="0.6"/>
+    <circle cx="21" cy="40" r="0.35" fill="#b8a0ff" opacity="0.4"/>
+    <circle cx="22" cy="39.3" r="0.45" fill="#9370db" opacity="0.55"/>
+    <circle cx="21.5" cy="40.6" r="0.4" fill="#5b4ea8" opacity="0.5"/>
+    <circle cx="25" cy="44" r="0.55" fill="#7b68ee" opacity="0.55"/>
+    <circle cx="25" cy="44" r="0.3" fill="#b8a0ff" opacity="0.35"/>
+    <circle cx="25.7" cy="43.4" r="0.4" fill="#9370db" opacity="0.45"/>
+    <circle cx="19" cy="36" r="0.45" fill="#7b68ee" opacity="0.5"/>
+    <circle cx="19" cy="36" r="0.25" fill="#b8a0ff" opacity="0.3"/>
+
+    <!-- Right vine scrollwork (aurora, vibrant, mirror) -->
+    <path d="M64 56 C68 52 72 47 71 41 C70 37 67 35 65 37" fill="none" stroke="#00b8a0" stroke-width="0.8" stroke-linecap="round"/>
+    <path d="M62 55 C65 51 68 48 67 43 C66 40 64 39 63 41" fill="none" stroke="#00d4c0" stroke-width="0.6" stroke-linecap="round"/>
+    <!-- Right tendrils -->
+    <path d="M71 41 C73 39 74 36 73 34" fill="none" stroke="#00b8a0" stroke-width="0.4" stroke-linecap="round"/>
+    <path d="M68 45 C70 44 72 42 71 40" fill="none" stroke="#00d4c0" stroke-width="0.35" stroke-linecap="round"/>
+    <path d="M65 37 C64 35 65 33 66 32" fill="none" stroke="#00d4c0" stroke-width="0.35" stroke-linecap="round"/>
+    <path d="M73 34 C74 33 74.5 32 74 31" fill="none" stroke="#00b8a0" stroke-width="0.3" stroke-linecap="round"/>
+    <!-- Right leaves (aurora teal, mirrored serrated/lobed varieties) -->
+    <!-- Serrated pointed leaf -->
+    <path d="M70 43 L70.8 41.8 L71.4 42 L71.7 40.8 L72.2 41 L71.8 39.8 L71 39 L70 38.6 L69 39 L68.2 39.8 L67.8 41 L68.3 40.8 L68.6 42 L69.2 41.8z" fill="#00b8a0" opacity="0.75"/>
+    <!-- Tri-lobed leaf -->
+    <path d="M67 47 L67.5 46 L68.5 46 L69 45 L69 44 L68 43.5 L67.5 43 L67 43.5 L66.5 43 L66 43.5 L65 44 L65 45 L65.5 46 L66.5 46z" fill="#00d4c0" opacity="0.65"/>
+    <!-- Deeply toothed lance -->
+    <path d="M69 39.5 L69.8 38.2 L70.5 38.5 L70.8 37.2 L71.2 37.5 L71 36.2 L70.5 35.5 L69.8 35 L69 35.2 L68 35.5 L67.5 36.2 L67.2 37.5 L67.8 37.2 L68 38.5 L68.5 38.2z" fill="#009e88" opacity="0.7"/>
+    <!-- Fan palmate leaf -->
+    <path d="M72 44.5 L73 43 L73.8 43.3 L74 42 L73.8 41 L73 40.5 L72.5 40 L71.5 40 L70.5 40.5 L70 41.5 L70.2 42.5 L71 43z" fill="#00b8a0" opacity="0.6"/>
+    <!-- Small toothed leaf -->
+    <path d="M65 50 L65.7 49 L66.2 49.2 L66.3 48 L65.8 47.5 L65 47 L64.2 47.5 L63.8 48.2 L64 49.2 L64.5 49z" fill="#00d4c0" opacity="0.55"/>
+    <!-- Small asymmetric toothed -->
+    <path d="M72.5 37 L73.2 36 L73.8 36.2 L74 35 L73.7 34.2 L73 33.6 L72.2 33.6 L71.5 34 L71 34.8 L71.2 35.5 L71.5 36 L72 36.3z" fill="#00b8a0" opacity="0.6"/>
+    <!-- Right crystal gems (aurora purple, glowing) -->
+    <circle cx="71" cy="40" r="0.6" fill="#7b68ee" opacity="0.6"/>
+    <circle cx="71" cy="40" r="0.35" fill="#b8a0ff" opacity="0.4"/>
+    <circle cx="70" cy="39.3" r="0.45" fill="#9370db" opacity="0.55"/>
+    <circle cx="70.5" cy="40.6" r="0.4" fill="#5b4ea8" opacity="0.5"/>
+    <circle cx="67" cy="44" r="0.55" fill="#7b68ee" opacity="0.55"/>
+    <circle cx="67" cy="44" r="0.3" fill="#b8a0ff" opacity="0.35"/>
+    <circle cx="66.3" cy="43.4" r="0.4" fill="#9370db" opacity="0.45"/>
+    <circle cx="73" cy="36" r="0.45" fill="#7b68ee" opacity="0.5"/>
+    <circle cx="73" cy="36" r="0.25" fill="#b8a0ff" opacity="0.3"/>
+
+    <!-- Bottom ribbon with bow (aurora, luminous) -->
+    <path d="M37 57 Q46 53.5 55 57" fill="none" stroke="#00bfff" stroke-width="0.7" opacity="0.45"/>
+    <path d="M35 58 Q46 54.5 57 58" fill="none" stroke="#7b68ee" stroke-width="0.5" opacity="0.35"/>
+    <path d="M39 57.5 Q46 55 53 57.5" fill="none" stroke="#9370db" stroke-width="0.4" opacity="0.4"/>
+    <!-- Ribbon bow -->
+    <path d="M44.5 56 C45.5 58.5 47 58.5 46 56 C47 58.5 48.5 58.5 47.5 56" fill="none" stroke="#9370db" stroke-width="0.45" opacity="0.5"/>
+    <circle cx="46" cy="56.5" r="0.55" fill="#00bfff" opacity="0.4"/>
+    <circle cx="46" cy="56.5" r="0.3" fill="#66ffdd" opacity="0.25"/>
+    <!-- Ribbon tails -->
+    <path d="M39 57.5 L37 59 L38 58" fill="none" stroke="#7b68ee" stroke-width="0.35" opacity="0.3"/>
+    <path d="M53 57.5 L55 59 L54 58" fill="none" stroke="#7b68ee" stroke-width="0.35" opacity="0.3"/>
+
+    <!-- Aurora accent stars at wreath tips (brighter, larger) -->
+    <path d="M19 35 l0.6 1.2 1.3 0.18 -1 0.9 0.24 1.3 -1.14 -0.66 -1.14 0.66 0.24 -1.3 -1 -0.9 1.3 -0.18z" fill="#00e5b0" opacity="0.45"/>
+    <path d="M73 35 l0.6 1.2 1.3 0.18 -1 0.9 0.24 1.3 -1.14 -0.66 -1.14 0.66 0.24 -1.3 -1 -0.9 1.3 -0.18z" fill="#da70d6" opacity="0.45"/>
+    <!-- Extra mid-branch stars -->
+    <path d="M28 48 l0.4 0.8 0.9 0.12 -0.7 0.6 0.16 0.9 -0.76 -0.44 -0.76 0.44 0.16 -0.9 -0.7 -0.6 0.9 -0.12z" fill="#00bfff" opacity="0.3"/>
+    <path d="M64 48 l0.4 0.8 0.9 0.12 -0.7 0.6 0.16 0.9 -0.76 -0.44 -0.76 0.44 0.16 -0.9 -0.7 -0.6 0.9 -0.12z" fill="#9370db" opacity="0.3"/>
+
+    <!-- Aurora accent dots along wreath body (more vivid) -->
+    <circle cx="30" cy="39.5" r="0.4" fill="#00e5b0" opacity="0.35"/>
+    <circle cx="62" cy="39.5" r="0.4" fill="#da70d6" opacity="0.35"/>
+    <circle cx="35" cy="38" r="0.35" fill="#00bfff" opacity="0.3"/>
+    <circle cx="57" cy="38" r="0.35" fill="#9370db" opacity="0.3"/>
+    <circle cx="40" cy="37.5" r="0.3" fill="#00e5b0" opacity="0.25"/>
+    <circle cx="52" cy="37.5" r="0.3" fill="#da70d6" opacity="0.25"/>
+    <circle cx="46" cy="37" r="0.35" fill="#00bfff" opacity="0.3"/>
+    <!-- Extra glow dots -->
+    <circle cx="24" cy="41" r="0.3" fill="#66ffdd" opacity="0.2"/>
+    <circle cx="68" cy="41" r="0.3" fill="#c7a0ff" opacity="0.2"/>
+    <circle cx="33" cy="45" r="0.25" fill="#00bfff" opacity="0.18"/>
+    <circle cx="59" cy="45" r="0.25" fill="#9370db" opacity="0.18"/>
+  </g>
+
+  <!-- Ornate Trophy (defined once, reused) -->
+  <g id="tp" transform="translate(7,5)">
+    <!-- Base tier 3 (bottom, widest) -->
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-rim)"/>
+    <!-- Base tier 2 -->
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-rim)"/>
+    <!-- Base tier 1 (top) -->
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-body)"/>
+    <!-- Base scrollwork -->
+    <path d="M4.2 14.9 C3.7 14.5 3.2 14.5 2.8 14.7" fill="none" stroke="#b8860b" stroke-width="0.2" opacity="0.3"/>
+    <path d="M11.8 14.9 C12.3 14.5 12.8 14.5 13.2 14.7" fill="none" stroke="#b8860b" stroke-width="0.2" opacity="0.3"/>
+    <!-- Stem -->
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-body)"/>
+    <!-- Stem decorative knob -->
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-rim)"/>
+    <!-- Stem collar at cup junction -->
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-rim)"/>
+    <!-- Cup body -->
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-body)"/>
+    <!-- Cup rim (flared) -->
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-rim)"/>
+    <!-- Rim top highlight -->
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#fffce8" opacity="0.8"/>
+    <!-- Rim underline -->
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#c9a400" opacity="0.4"/>
+    <!-- Left handle (ornate C-curve) -->
+    <path d="M3 2.8 C1.2 2.4 0.3 3.9 0.3 5.5 C0.3 7.0 1.2 8.0 3.2 7.9 C1.7 7.4 1.0 6.5 1.0 5.5 C1.0 4.2 1.8 3.1 3 3.0 Z" fill="url(#g-handle)"/>
+    <circle cx="3.2" cy="7.9" r="0.6" fill="url(#g-rim)"/>
+    <circle cx="3.2" cy="7.9" r="0.25" fill="url(#g-base)"/>
+    <!-- Right handle (ornate C-curve) -->
+    <path d="M13 2.8 C14.8 2.4 15.7 3.9 15.7 5.5 C15.7 7.0 14.8 8.0 12.8 7.9 C14.3 7.4 15.0 6.5 15.0 5.5 C15.0 4.2 14.2 3.1 13 3.0 Z" fill="url(#g-handle)"/>
+    <circle cx="12.8" cy="7.9" r="0.6" fill="url(#g-rim)"/>
+    <circle cx="12.8" cy="7.9" r="0.25" fill="url(#g-base)"/>
+    <!-- Engraved decorative lines on cup -->
+    <line x1="3.8" y1="3.5" x2="12.2" y2="3.5" stroke="#b8860b" stroke-width="0.15" opacity="0.35"/>
+    <line x1="4.8" y1="8" x2="11.2" y2="8" stroke="#b8860b" stroke-width="0.15" opacity="0.35"/>
+    <!-- Rivets on rim -->
+    <circle cx="4.5" cy="1.2" r="0.22" fill="#fffce8" opacity="0.5"/>
+    <circle cx="11.5" cy="1.2" r="0.22" fill="#fffce8" opacity="0.5"/>
+    <circle cx="6.2" cy="0.85" r="0.15" fill="#fffce8" opacity="0.35"/>
+    <circle cx="9.8" cy="0.85" r="0.15" fill="#fffce8" opacity="0.35"/>
+    <!-- Star accents on cup -->
+    <path d="M5 2.8 l0.15 0.35 0.38 0 -0.3 0.25 0.1 0.38 -0.33 -0.2 -0.33 0.2 0.1 -0.38 -0.3 -0.25 0.38 0z" fill="#daa520" opacity="0.35"/>
+    <path d="M11 2.8 l0.15 0.35 0.38 0 -0.3 0.25 0.1 0.38 -0.33 -0.2 -0.33 0.2 0.1 -0.38 -0.3 -0.25 0.38 0z" fill="#daa520" opacity="0.35"/>
+    <!-- Tiny laurel sprigs around medallion -->
+    <path d="M5.3 7.2 C5.6 6.3 5.5 5.6 5.6 4.8" fill="none" stroke="#009366" stroke-width="0.2" opacity="0.25"/>
+    <path d="M5 7.5 C5.3 6.5 5.2 5.8 5.3 5.1" fill="none" stroke="#009366" stroke-width="0.15" opacity="0.18"/>
+    <path d="M10.7 7.2 C10.4 6.3 10.5 5.6 10.4 4.8" fill="none" stroke="#009366" stroke-width="0.2" opacity="0.25"/>
+    <path d="M11 7.5 C10.7 6.5 10.8 5.8 10.7 5.1" fill="none" stroke="#009366" stroke-width="0.15" opacity="0.18"/>
+    <!-- Medallion outer ring -->
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#c9a400" stroke-width="0.35"/>
+    <!-- Medallion decorative inner ring -->
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#daa520" stroke-width="0.12" opacity="0.5"/>
+    <!-- Medallion fill -->
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <!-- Grade letter -->
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#886000">A</text>
+  </g>
+
+  <!-- Gold Trophy A-rank Tier 1: Plain cup, no handles, no medallion -->
+  <g id="tp-a1" transform="translate(7,5)">
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-rim)"/>
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-rim)"/>
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-body)"/>
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-body)"/>
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-rim)"/>
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-rim)"/>
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-body)"/>
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-rim)"/>
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#fffce8" opacity="0.8"/>
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#c9a400" opacity="0.4"/>
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#c9a400" stroke-width="0.35"/>
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#daa520" stroke-width="0.12" opacity="0.5"/>
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#886000">A</text>
+  </g>
+
+  <!-- Gold Trophy A-rank Tier 2: + handles + scrollwork -->
+  <g id="tp-a2" transform="translate(7,5)">
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-rim)"/>
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-rim)"/>
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-body)"/>
+    <!-- Base scrollwork -->
+    <path d="M4.2 14.9 C3.7 14.5 3.2 14.5 2.8 14.7" fill="none" stroke="#b8860b" stroke-width="0.2" opacity="0.3"/>
+    <path d="M11.8 14.9 C12.3 14.5 12.8 14.5 13.2 14.7" fill="none" stroke="#b8860b" stroke-width="0.2" opacity="0.3"/>
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-body)"/>
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-rim)"/>
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-rim)"/>
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-body)"/>
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-rim)"/>
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#fffce8" opacity="0.8"/>
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#c9a400" opacity="0.4"/>
+    <!-- Left handle -->
+    <path d="M3 2.8 C1.2 2.4 0.3 3.9 0.3 5.5 C0.3 7.0 1.2 8.0 3.2 7.9 C1.7 7.4 1.0 6.5 1.0 5.5 C1.0 4.2 1.8 3.1 3 3.0 Z" fill="url(#g-handle)"/>
+    <circle cx="3.2" cy="7.9" r="0.6" fill="url(#g-rim)"/>
+    <circle cx="3.2" cy="7.9" r="0.25" fill="url(#g-base)"/>
+    <!-- Right handle -->
+    <path d="M13 2.8 C14.8 2.4 15.7 3.9 15.7 5.5 C15.7 7.0 14.8 8.0 12.8 7.9 C14.3 7.4 15.0 6.5 15.0 5.5 C15.0 4.2 14.2 3.1 13 3.0 Z" fill="url(#g-handle)"/>
+    <circle cx="12.8" cy="7.9" r="0.6" fill="url(#g-rim)"/>
+    <circle cx="12.8" cy="7.9" r="0.25" fill="url(#g-base)"/>
+    <!-- Medallion -->
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#c9a400" stroke-width="0.35"/>
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#daa520" stroke-width="0.12" opacity="0.5"/>
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#886000">A</text>
+  </g>
+
+  <!-- Gold Trophy A-rank Tier 3: + rivets + engraved line + stars -->
+  <g id="tp-a3" transform="translate(7,5)">
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-rim)"/>
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-rim)"/>
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-body)"/>
+    <!-- Base scrollwork -->
+    <path d="M4.2 14.9 C3.7 14.5 3.2 14.5 2.8 14.7" fill="none" stroke="#b8860b" stroke-width="0.2" opacity="0.3"/>
+    <path d="M11.8 14.9 C12.3 14.5 12.8 14.5 13.2 14.7" fill="none" stroke="#b8860b" stroke-width="0.2" opacity="0.3"/>
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-body)"/>
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-rim)"/>
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-rim)"/>
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-body)"/>
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-rim)"/>
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#fffce8" opacity="0.8"/>
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#c9a400" opacity="0.4"/>
+    <!-- Left handle -->
+    <path d="M3 2.8 C1.2 2.4 0.3 3.9 0.3 5.5 C0.3 7.0 1.2 8.0 3.2 7.9 C1.7 7.4 1.0 6.5 1.0 5.5 C1.0 4.2 1.8 3.1 3 3.0 Z" fill="url(#g-handle)"/>
+    <circle cx="3.2" cy="7.9" r="0.6" fill="url(#g-rim)"/>
+    <circle cx="3.2" cy="7.9" r="0.25" fill="url(#g-base)"/>
+    <!-- Right handle -->
+    <path d="M13 2.8 C14.8 2.4 15.7 3.9 15.7 5.5 C15.7 7.0 14.8 8.0 12.8 7.9 C14.3 7.4 15.0 6.5 15.0 5.5 C15.0 4.2 14.2 3.1 13 3.0 Z" fill="url(#g-handle)"/>
+    <circle cx="12.8" cy="7.9" r="0.6" fill="url(#g-rim)"/>
+    <circle cx="12.8" cy="7.9" r="0.25" fill="url(#g-base)"/>
+    <!-- Engraved line on cup -->
+    <line x1="3.8" y1="3.5" x2="12.2" y2="3.5" stroke="#b8860b" stroke-width="0.15" opacity="0.35"/>
+    <!-- Rivets on rim -->
+    <circle cx="4.5" cy="1.2" r="0.22" fill="#fffce8" opacity="0.5"/>
+    <circle cx="11.5" cy="1.2" r="0.22" fill="#fffce8" opacity="0.5"/>
+    <circle cx="6.2" cy="0.85" r="0.15" fill="#fffce8" opacity="0.35"/>
+    <circle cx="9.8" cy="0.85" r="0.15" fill="#fffce8" opacity="0.35"/>
+    <!-- Star accents -->
+    <path d="M5 2.8 l0.15 0.35 0.38 0 -0.3 0.25 0.1 0.38 -0.33 -0.2 -0.33 0.2 0.1 -0.38 -0.3 -0.25 0.38 0z" fill="#daa520" opacity="0.35"/>
+    <path d="M11 2.8 l0.15 0.35 0.38 0 -0.3 0.25 0.1 0.38 -0.33 -0.2 -0.33 0.2 0.1 -0.38 -0.3 -0.25 0.38 0z" fill="#daa520" opacity="0.35"/>
+    <!-- Medallion -->
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#c9a400" stroke-width="0.35"/>
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#daa520" stroke-width="0.12" opacity="0.5"/>
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#886000">A</text>
+  </g>
+
+  <!-- Silver Trophy B-rank (slightly less ornate than A) -->
+  <g id="tp-b" transform="translate(7,5)">
+    <!-- Base tier 3 (bottom, widest) -->
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-sv-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-sv-rim)"/>
+    <!-- Base tier 2 -->
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-sv-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-sv-rim)"/>
+    <!-- Base tier 1 (top) -->
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-sv-body)"/>
+    <!-- Base scrollwork -->
+    <path d="M4.2 14.9 C3.7 14.5 3.2 14.5 2.8 14.7" fill="none" stroke="#808090" stroke-width="0.2" opacity="0.25"/>
+    <path d="M11.8 14.9 C12.3 14.5 12.8 14.5 13.2 14.7" fill="none" stroke="#808090" stroke-width="0.2" opacity="0.25"/>
+    <!-- Stem -->
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-sv-body)"/>
+    <!-- Stem decorative knob -->
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-sv-rim)"/>
+    <!-- Stem collar at cup junction -->
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-sv-rim)"/>
+    <!-- Cup body -->
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-sv-body)"/>
+    <!-- Cup rim (flared) -->
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-sv-rim)"/>
+    <!-- Rim top highlight -->
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#f8f8ff" opacity="0.7"/>
+    <!-- Rim underline -->
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#a0a0aa" opacity="0.35"/>
+    <!-- Left handle (ornate C-curve) -->
+    <path d="M3 2.8 C1.2 2.4 0.3 3.9 0.3 5.5 C0.3 7.0 1.2 8.0 3.2 7.9 C1.7 7.4 1.0 6.5 1.0 5.5 C1.0 4.2 1.8 3.1 3 3.0 Z" fill="url(#g-sv-handle)"/>
+    <circle cx="3.2" cy="7.9" r="0.6" fill="url(#g-sv-rim)"/>
+    <circle cx="3.2" cy="7.9" r="0.25" fill="url(#g-sv-base)"/>
+    <!-- Right handle (ornate C-curve) -->
+    <path d="M13 2.8 C14.8 2.4 15.7 3.9 15.7 5.5 C15.7 7.0 14.8 8.0 12.8 7.9 C14.3 7.4 15.0 6.5 15.0 5.5 C15.0 4.2 14.2 3.1 13 3.0 Z" fill="url(#g-sv-handle)"/>
+    <circle cx="12.8" cy="7.9" r="0.6" fill="url(#g-sv-rim)"/>
+    <circle cx="12.8" cy="7.9" r="0.25" fill="url(#g-sv-base)"/>
+    <!-- Engraved decorative line on cup -->
+    <line x1="3.8" y1="3.5" x2="12.2" y2="3.5" stroke="#888892" stroke-width="0.15" opacity="0.3"/>
+    <!-- Rivets on rim -->
+    <circle cx="4.5" cy="1.2" r="0.2" fill="#f0f0f5" opacity="0.45"/>
+    <circle cx="11.5" cy="1.2" r="0.2" fill="#f0f0f5" opacity="0.45"/>
+    <!-- Medallion outer ring -->
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#a0a0aa" stroke-width="0.35"/>
+    <!-- Medallion decorative inner ring -->
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#b8b8c2" stroke-width="0.12" opacity="0.5"/>
+    <!-- Medallion fill -->
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <!-- Grade letter B -->
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#606068">B</text>
+  </g>
+
+  <!-- Silver Trophy B-rank Tier 1: Plain cup -->
+  <g id="tp-b1" transform="translate(7,5)">
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-sv-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-sv-rim)"/>
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-sv-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-sv-rim)"/>
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-sv-body)"/>
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-sv-body)"/>
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-sv-rim)"/>
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-sv-rim)"/>
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-sv-body)"/>
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-sv-rim)"/>
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#f8f8ff" opacity="0.7"/>
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#a0a0aa" opacity="0.35"/>
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#a0a0aa" stroke-width="0.35"/>
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#b8b8c2" stroke-width="0.12" opacity="0.5"/>
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#606068">B</text>
+  </g>
+
+  <!-- Silver Trophy B-rank Tier 2: + handles + scrollwork -->
+  <g id="tp-b2" transform="translate(7,5)">
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-sv-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-sv-rim)"/>
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-sv-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-sv-rim)"/>
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-sv-body)"/>
+    <!-- Base scrollwork -->
+    <path d="M4.2 14.9 C3.7 14.5 3.2 14.5 2.8 14.7" fill="none" stroke="#808090" stroke-width="0.2" opacity="0.25"/>
+    <path d="M11.8 14.9 C12.3 14.5 12.8 14.5 13.2 14.7" fill="none" stroke="#808090" stroke-width="0.2" opacity="0.25"/>
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-sv-body)"/>
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-sv-rim)"/>
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-sv-rim)"/>
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-sv-body)"/>
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-sv-rim)"/>
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#f8f8ff" opacity="0.7"/>
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#a0a0aa" opacity="0.35"/>
+    <!-- Left handle -->
+    <path d="M3 2.8 C1.2 2.4 0.3 3.9 0.3 5.5 C0.3 7.0 1.2 8.0 3.2 7.9 C1.7 7.4 1.0 6.5 1.0 5.5 C1.0 4.2 1.8 3.1 3 3.0 Z" fill="url(#g-sv-handle)"/>
+    <circle cx="3.2" cy="7.9" r="0.6" fill="url(#g-sv-rim)"/>
+    <circle cx="3.2" cy="7.9" r="0.25" fill="url(#g-sv-base)"/>
+    <!-- Right handle -->
+    <path d="M13 2.8 C14.8 2.4 15.7 3.9 15.7 5.5 C15.7 7.0 14.8 8.0 12.8 7.9 C14.3 7.4 15.0 6.5 15.0 5.5 C15.0 4.2 14.2 3.1 13 3.0 Z" fill="url(#g-sv-handle)"/>
+    <circle cx="12.8" cy="7.9" r="0.6" fill="url(#g-sv-rim)"/>
+    <circle cx="12.8" cy="7.9" r="0.25" fill="url(#g-sv-base)"/>
+    <!-- Medallion -->
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#a0a0aa" stroke-width="0.35"/>
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#b8b8c2" stroke-width="0.12" opacity="0.5"/>
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#606068">B</text>
+  </g>
+
+  <!-- Silver Trophy B-rank Tier 3: + rivets + engraved line + stars -->
+  <g id="tp-b3" transform="translate(7,5)">
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-sv-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-sv-rim)"/>
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-sv-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-sv-rim)"/>
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-sv-body)"/>
+    <!-- Base scrollwork -->
+    <path d="M4.2 14.9 C3.7 14.5 3.2 14.5 2.8 14.7" fill="none" stroke="#808090" stroke-width="0.2" opacity="0.25"/>
+    <path d="M11.8 14.9 C12.3 14.5 12.8 14.5 13.2 14.7" fill="none" stroke="#808090" stroke-width="0.2" opacity="0.25"/>
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-sv-body)"/>
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-sv-rim)"/>
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-sv-rim)"/>
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-sv-body)"/>
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-sv-rim)"/>
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#f8f8ff" opacity="0.7"/>
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#a0a0aa" opacity="0.35"/>
+    <!-- Left handle -->
+    <path d="M3 2.8 C1.2 2.4 0.3 3.9 0.3 5.5 C0.3 7.0 1.2 8.0 3.2 7.9 C1.7 7.4 1.0 6.5 1.0 5.5 C1.0 4.2 1.8 3.1 3 3.0 Z" fill="url(#g-sv-handle)"/>
+    <circle cx="3.2" cy="7.9" r="0.6" fill="url(#g-sv-rim)"/>
+    <circle cx="3.2" cy="7.9" r="0.25" fill="url(#g-sv-base)"/>
+    <!-- Right handle -->
+    <path d="M13 2.8 C14.8 2.4 15.7 3.9 15.7 5.5 C15.7 7.0 14.8 8.0 12.8 7.9 C14.3 7.4 15.0 6.5 15.0 5.5 C15.0 4.2 14.2 3.1 13 3.0 Z" fill="url(#g-sv-handle)"/>
+    <circle cx="12.8" cy="7.9" r="0.6" fill="url(#g-sv-rim)"/>
+    <circle cx="12.8" cy="7.9" r="0.25" fill="url(#g-sv-base)"/>
+    <!-- Engraved line on cup -->
+    <line x1="3.8" y1="3.5" x2="12.2" y2="3.5" stroke="#888892" stroke-width="0.15" opacity="0.3"/>
+    <!-- Rivets on rim -->
+    <circle cx="4.5" cy="1.2" r="0.2" fill="#f0f0f5" opacity="0.45"/>
+    <circle cx="11.5" cy="1.2" r="0.2" fill="#f0f0f5" opacity="0.45"/>
+    <circle cx="6.2" cy="0.85" r="0.13" fill="#f0f0f5" opacity="0.3"/>
+    <circle cx="9.8" cy="0.85" r="0.13" fill="#f0f0f5" opacity="0.3"/>
+    <!-- Star accents -->
+    <path d="M5 2.8 l0.12 0.28 0.3 0 -0.24 0.2 0.08 0.3 -0.26 -0.16 -0.26 0.16 0.08 -0.3 -0.24 -0.2 0.3 0z" fill="#b0b0ba" opacity="0.3"/>
+    <path d="M11 2.8 l0.12 0.28 0.3 0 -0.24 0.2 0.08 0.3 -0.26 -0.16 -0.26 0.16 0.08 -0.3 -0.24 -0.2 0.3 0z" fill="#b0b0ba" opacity="0.3"/>
+    <!-- Medallion -->
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#a0a0aa" stroke-width="0.35"/>
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#b8b8c2" stroke-width="0.12" opacity="0.5"/>
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#606068">B</text>
+  </g>
+
+  <!-- ===== Aurora Theme (S-rank) ===== -->
+  <!-- Aurora Metallic Gradients -->
+  <linearGradient id="g-au-body" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#b0fff0"/>
+    <stop offset="18%" stop-color="#00e5b0"/>
+    <stop offset="35%" stop-color="#00bfff"/>
+    <stop offset="55%" stop-color="#7b68ee"/>
+    <stop offset="75%" stop-color="#da70d6"/>
+    <stop offset="90%" stop-color="#00bfff"/>
+    <stop offset="100%" stop-color="#00e5b0"/>
+  </linearGradient>
+  <linearGradient id="g-au-rim" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#e0fff8"/>
+    <stop offset="30%" stop-color="#00e5b0"/>
+    <stop offset="50%" stop-color="#00bfff"/>
+    <stop offset="70%" stop-color="#c7a0ff"/>
+    <stop offset="100%" stop-color="#e0fff8"/>
+  </linearGradient>
+  <linearGradient id="g-au-base" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#00bfff"/>
+    <stop offset="50%" stop-color="#5b4ea8"/>
+    <stop offset="100%" stop-color="#3a2d70"/>
+  </linearGradient>
+  <linearGradient id="g-au-handle" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#66ffdd"/>
+    <stop offset="50%" stop-color="#00bfff"/>
+    <stop offset="100%" stop-color="#9370db"/>
+  </linearGradient>
+  <linearGradient id="g-au-progress" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#00e5b0"/>
+    <stop offset="25%" stop-color="#00bfff"/>
+    <stop offset="50%" stop-color="#7b68ee"/>
+    <stop offset="75%" stop-color="#da70d6"/>
+    <stop offset="100%" stop-color="#00e5b0"/>
+  </linearGradient>
+  <radialGradient id="g-au-card" cx="50%" cy="35%" r="65%">
+    <stop offset="0%" stop-color="#f0fffc"/>
+    <stop offset="100%" stop-color="#ffffff"/>
+  </radialGradient>
+  <radialGradient id="g-au-glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#00e5b0" stop-opacity="0.0025"/>
+    <stop offset="15%" stop-color="#00d4a8" stop-opacity="0.002"/>
+    <stop offset="30%" stop-color="#7b68ee" stop-opacity="0.0015"/>
+    <stop offset="50%" stop-color="#b060d0" stop-opacity="0.0008"/>
+    <stop offset="70%" stop-color="#da70d6" stop-opacity="0.0003"/>
+    <stop offset="85%" stop-color="#da70d6" stop-opacity="0.0001"/>
+    <stop offset="100%" stop-color="#da70d6" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="g-au-glow2" cx="50%" cy="45%" r="45%">
+    <stop offset="0%" stop-color="#00bfff" stop-opacity="0.002"/>
+    <stop offset="25%" stop-color="#00bfff" stop-opacity="0.0012"/>
+    <stop offset="50%" stop-color="#00bfff" stop-opacity="0.0005"/>
+    <stop offset="75%" stop-color="#00bfff" stop-opacity="0.0002"/>
+    <stop offset="100%" stop-color="#00bfff" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="f-au-glow-feather" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="14"/>
+  </filter>
+  <!-- Aurora border gradient -->
+  <linearGradient id="g-au-border" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#00e5b0"/>
+    <stop offset="33%" stop-color="#00bfff"/>
+    <stop offset="66%" stop-color="#9370db"/>
+    <stop offset="100%" stop-color="#da70d6"/>
+  </linearGradient>
+
+  <!-- S-Rank Aurora Trophy -->
+  <g id="tp-s" transform="translate(7,5)" class="sss-trophy">
+    <!-- Base tier 3 (bottom, widest) -->
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-au-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-au-rim)"/>
+    <!-- Base gem accents -->
+    <circle class="sss-gem sss-gem-d1" cx="3" cy="16.8" r="0.35" fill="#00e5b0"/>
+    <circle class="sss-gem sss-gem-d2" cx="8" cy="17" r="0.4" fill="#9370db"/>
+    <circle class="sss-gem sss-gem-d3" cx="13" cy="16.8" r="0.35" fill="#00bfff"/>
+    <!-- Base tier 2 -->
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-au-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-au-rim)"/>
+    <!-- Base tier 1 (top) -->
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-au-body)"/>
+    <!-- Base scrollwork -->
+    <path d="M4.2 14.9 C3.7 14.5 3.2 14.5 2.8 14.7" fill="none" stroke="#5b4ea8" stroke-width="0.2" opacity="0.4"/>
+    <path d="M11.8 14.9 C12.3 14.5 12.8 14.5 13.2 14.7" fill="none" stroke="#5b4ea8" stroke-width="0.2" opacity="0.4"/>
+    <!-- Extra base filigree -->
+    <path d="M5.5 15 C5 14.3 4.2 14.3 3.8 14.6" fill="none" stroke="#00bfff" stroke-width="0.15" opacity="0.3"/>
+    <path d="M10.5 15 C11 14.3 11.8 14.3 12.2 14.6" fill="none" stroke="#00bfff" stroke-width="0.15" opacity="0.3"/>
+    <!-- Extra scrollwork curls -->
+    <path d="M6.5 14.6 C6 14.2 5.5 14.1 5 14.3" fill="none" stroke="#da70d6" stroke-width="0.15" opacity="0.25"/>
+    <path d="M9.5 14.6 C10 14.2 10.5 14.1 11 14.3" fill="none" stroke="#da70d6" stroke-width="0.15" opacity="0.25"/>
+    <!-- Stem -->
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-au-body)"/>
+    <!-- Stem decorative knob -->
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-au-rim)"/>
+    <!-- Stem collar at cup junction -->
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-au-rim)"/>
+    <!-- Extra stem ring -->
+    <ellipse cx="8" cy="13.2" rx="1.4" ry="0.35" fill="url(#g-au-rim)" opacity="0.6"/>
+    <!-- Stem gem -->
+    <circle class="sss-gem sss-gem-d2" cx="8" cy="12" r="0.45" fill="#da70d6"/>
+    <circle cx="8" cy="11.85" r="0.15" fill="#fff" opacity="0.5"/>
+    <!-- Cup body -->
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-au-body)"/>
+    <!-- Cup inner glow -->
+    <path d="M4 2.5 L12 2.5 C11.6 4.5 11 6.5 10 7.8 C9.2 8.8 8.5 9.5 8 9.5 C7.5 9.5 6.8 8.8 6 7.8 C5 6.5 4.4 4.5 4 2.5 Z" fill="#00e5b0" opacity="0.12"/>
+    <!-- Cup rim (flared) -->
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-au-rim)"/>
+    <!-- Rim top highlight -->
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#e0fff8" opacity="0.9"/>
+    <!-- Rim underline -->
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#5b4ea8" opacity="0.4"/>
+    <!-- Crown on top of cup -->
+    <g class="sss-crown">
+      <path d="M4.5 0.3 L5.5 -1.8 L7 -0.5 L8 -2.2 L9 -0.5 L10.5 -1.8 L11.5 0.3 Z" fill="url(#g-au-rim)"/>
+      <path d="M5 0 L5.8 -1.2 L7.1 -0.2 L8 -1.6 L8.9 -0.2 L10.2 -1.2 L11 0 Z" fill="url(#g-au-body)" opacity="0.6"/>
+      <!-- Crown jewels -->
+      <circle cx="5.5" cy="-1.4" r="0.3" fill="#00e5b0" opacity="0.8"/>
+      <circle cx="8" cy="-1.8" r="0.35" fill="#da70d6" opacity="0.9"/>
+      <circle cx="10.5" cy="-1.4" r="0.3" fill="#00bfff" opacity="0.8"/>
+      <!-- Crown jewel highlights -->
+      <circle cx="5.4" cy="-1.5" r="0.1" fill="#fff" opacity="0.6"/>
+      <circle cx="7.9" cy="-1.9" r="0.12" fill="#fff" opacity="0.6"/>
+      <circle cx="10.4" cy="-1.5" r="0.1" fill="#fff" opacity="0.6"/>
+    </g>
+    <!-- Left handle (ornate C-curve) -->
+    <path d="M3 2.8 C1.2 2.4 0.3 3.9 0.3 5.5 C0.3 7.0 1.2 8.0 3.2 7.9 C1.7 7.4 1.0 6.5 1.0 5.5 C1.0 4.2 1.8 3.1 3 3.0 Z" fill="url(#g-au-handle)"/>
+    <circle cx="3.2" cy="7.9" r="0.6" fill="url(#g-au-rim)"/>
+    <circle cx="3.2" cy="7.9" r="0.25" fill="url(#g-au-base)"/>
+    <!-- Left handle gem -->
+    <circle class="sss-gem sss-gem-d1" cx="1.1" cy="5.5" r="0.35" fill="#00e5b0"/>
+    <circle cx="1.0" cy="5.35" r="0.1" fill="#fff" opacity="0.5"/>
+    <!-- Right handle (ornate C-curve) -->
+    <path d="M13 2.8 C14.8 2.4 15.7 3.9 15.7 5.5 C15.7 7.0 14.8 8.0 12.8 7.9 C14.3 7.4 15.0 6.5 15.0 5.5 C15.0 4.2 14.2 3.1 13 3.0 Z" fill="url(#g-au-handle)"/>
+    <circle cx="12.8" cy="7.9" r="0.6" fill="url(#g-au-rim)"/>
+    <circle cx="12.8" cy="7.9" r="0.25" fill="url(#g-au-base)"/>
+    <!-- Right handle gem -->
+    <circle class="sss-gem sss-gem-d3" cx="14.9" cy="5.5" r="0.35" fill="#00bfff"/>
+    <circle cx="14.8" cy="5.35" r="0.1" fill="#fff" opacity="0.5"/>
+    <!-- Engraved decorative lines on cup -->
+    <line x1="3.8" y1="3.5" x2="12.2" y2="3.5" stroke="#5b4ea8" stroke-width="0.15" opacity="0.35"/>
+    <line x1="4.8" y1="8" x2="11.2" y2="8" stroke="#5b4ea8" stroke-width="0.15" opacity="0.35"/>
+    <!-- Extra engraved lines -->
+    <line x1="4.2" y1="5.5" x2="11.8" y2="5.5" stroke="#00bfff" stroke-width="0.1" opacity="0.2"/>
+    <line x1="4" y1="4.5" x2="12" y2="4.5" stroke="#da70d6" stroke-width="0.08" opacity="0.15"/>
+    <line x1="4.5" y1="6.5" x2="11.5" y2="6.5" stroke="#00e5b0" stroke-width="0.08" opacity="0.15"/>
+    <!-- Rivets on rim -->
+    <circle cx="4.5" cy="1.2" r="0.22" fill="#e0fff8" opacity="0.6"/>
+    <circle cx="11.5" cy="1.2" r="0.22" fill="#e0fff8" opacity="0.6"/>
+    <circle cx="6.2" cy="0.85" r="0.15" fill="#e0fff8" opacity="0.4"/>
+    <circle cx="9.8" cy="0.85" r="0.15" fill="#e0fff8" opacity="0.4"/>
+    <!-- Extra rivets -->
+    <circle cx="3.5" cy="1.0" r="0.15" fill="#00e5b0" opacity="0.35"/>
+    <circle cx="12.5" cy="1.0" r="0.15" fill="#00bfff" opacity="0.35"/>
+    <!-- Star accents on cup -->
+    <path d="M5 2.8 l0.15 0.35 0.38 0 -0.3 0.25 0.1 0.38 -0.33 -0.2 -0.33 0.2 0.1 -0.38 -0.3 -0.25 0.38 0z" fill="#00e5b0" opacity="0.5"/>
+    <path d="M11 2.8 l0.15 0.35 0.38 0 -0.3 0.25 0.1 0.38 -0.33 -0.2 -0.33 0.2 0.1 -0.38 -0.3 -0.25 0.38 0z" fill="#da70d6" opacity="0.5"/>
+    <!-- Extra star accents -->
+    <path d="M8 3.3 l0.12 0.28 0.3 0 -0.24 0.2 0.08 0.3 -0.26 -0.16 -0.26 0.16 0.08 -0.3 -0.24 -0.2 0.3 0z" fill="#00bfff" opacity="0.4"/>
+    <path d="M6.2 7.5 l0.1 0.22 0.24 0 -0.19 0.16 0.06 0.24 -0.21 -0.13 -0.21 0.13 0.06 -0.24 -0.19 -0.16 0.24 0z" fill="#9370db" opacity="0.4"/>
+    <path d="M9.8 7.5 l0.1 0.22 0.24 0 -0.19 0.16 0.06 0.24 -0.21 -0.13 -0.21 0.13 0.06 -0.24 -0.19 -0.16 0.24 0z" fill="#00e5b0" opacity="0.4"/>
+    <!-- Tiny laurel sprigs around medallion -->
+    <path d="M5.3 7.2 C5.6 6.3 5.5 5.6 5.6 4.8" fill="none" stroke="#00e5b0" stroke-width="0.2" opacity="0.3"/>
+    <path d="M5 7.5 C5.3 6.5 5.2 5.8 5.3 5.1" fill="none" stroke="#00e5b0" stroke-width="0.15" opacity="0.2"/>
+    <path d="M10.7 7.2 C10.4 6.3 10.5 5.6 10.4 4.8" fill="none" stroke="#da70d6" stroke-width="0.2" opacity="0.3"/>
+    <path d="M11 7.5 C10.7 6.5 10.8 5.8 10.7 5.1" fill="none" stroke="#da70d6" stroke-width="0.15" opacity="0.2"/>
+    <!-- Extra laurel sprigs -->
+    <path d="M4.7 6.8 C4.9 6.2 4.8 5.5 5 4.5" fill="none" stroke="#00bfff" stroke-width="0.12" opacity="0.2"/>
+    <path d="M11.3 6.8 C11.1 6.2 11.2 5.5 11 4.5" fill="none" stroke="#9370db" stroke-width="0.12" opacity="0.2"/>
+    <!-- Medallion outer ring -->
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#7b68ee" stroke-width="0.4"/>
+    <!-- Medallion aurora ring -->
+    <circle cx="8" cy="5.5" r="2.85" fill="none" stroke="#00e5b0" stroke-width="0.12" opacity="0.4"/>
+    <!-- Medallion decorative inner ring -->
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#00bfff" stroke-width="0.12" opacity="0.6"/>
+    <!-- Medallion fill -->
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <!-- Grade letter S -->
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#5b4ea8">S</text>
+  </g>
+
+  <!-- Aurora Trophy S-rank Tier 1: plain cup -->
+  <g id="tp-s1" transform="translate(7,5)" class="sss-trophy">
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-au-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-au-rim)"/>
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-au-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-au-rim)"/>
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-au-body)"/>
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-au-body)"/>
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-au-rim)"/>
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-au-rim)"/>
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-au-body)"/>
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-au-rim)"/>
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#e0fff8" opacity="0.9"/>
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#5b4ea8" opacity="0.4"/>
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#7b68ee" stroke-width="0.4"/>
+    <circle cx="8" cy="5.5" r="2.85" fill="none" stroke="#00e5b0" stroke-width="0.12" opacity="0.4"/>
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#00bfff" stroke-width="0.12" opacity="0.6"/>
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#5b4ea8">S</text>
+  </g>
+
+  <!-- Aurora Trophy S-rank Tier 2: + handles + handle gems + scrollwork -->
+  <g id="tp-s2" transform="translate(7,5)" class="sss-trophy">
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-au-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-au-rim)"/>
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-au-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-au-rim)"/>
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-au-body)"/>
+    <!-- Base scrollwork -->
+    <path d="M4.2 14.9 C3.7 14.5 3.2 14.5 2.8 14.7" fill="none" stroke="#5b4ea8" stroke-width="0.2" opacity="0.4"/>
+    <path d="M11.8 14.9 C12.3 14.5 12.8 14.5 13.2 14.7" fill="none" stroke="#5b4ea8" stroke-width="0.2" opacity="0.4"/>
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-au-body)"/>
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-au-rim)"/>
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-au-rim)"/>
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-au-body)"/>
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-au-rim)"/>
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#e0fff8" opacity="0.9"/>
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#5b4ea8" opacity="0.4"/>
+    <!-- Left handle -->
+    <path d="M3 2.8 C1.2 2.4 0.3 3.9 0.3 5.5 C0.3 7.0 1.2 8.0 3.2 7.9 C1.7 7.4 1.0 6.5 1.0 5.5 C1.0 4.2 1.8 3.1 3 3.0 Z" fill="url(#g-au-handle)"/>
+    <circle cx="3.2" cy="7.9" r="0.6" fill="url(#g-au-rim)"/>
+    <circle cx="3.2" cy="7.9" r="0.25" fill="url(#g-au-base)"/>
+    <circle class="sss-gem sss-gem-d1" cx="1.1" cy="5.5" r="0.35" fill="#00e5b0"/>
+    <circle cx="1.0" cy="5.35" r="0.1" fill="#fff" opacity="0.5"/>
+    <!-- Right handle -->
+    <path d="M13 2.8 C14.8 2.4 15.7 3.9 15.7 5.5 C15.7 7.0 14.8 8.0 12.8 7.9 C14.3 7.4 15.0 6.5 15.0 5.5 C15.0 4.2 14.2 3.1 13 3.0 Z" fill="url(#g-au-handle)"/>
+    <circle cx="12.8" cy="7.9" r="0.6" fill="url(#g-au-rim)"/>
+    <circle cx="12.8" cy="7.9" r="0.25" fill="url(#g-au-base)"/>
+    <circle class="sss-gem sss-gem-d3" cx="14.9" cy="5.5" r="0.35" fill="#00bfff"/>
+    <circle cx="14.8" cy="5.35" r="0.1" fill="#fff" opacity="0.5"/>
+    <!-- Medallion -->
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#7b68ee" stroke-width="0.4"/>
+    <circle cx="8" cy="5.5" r="2.85" fill="none" stroke="#00e5b0" stroke-width="0.12" opacity="0.4"/>
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#00bfff" stroke-width="0.12" opacity="0.6"/>
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#5b4ea8">S</text>
+  </g>
+
+  <!-- Aurora Trophy S-rank Tier 3: + crown + gems + rivets + engraved lines + stars -->
+  <g id="tp-s3" transform="translate(7,5)" class="sss-trophy">
+    <!-- Base tier 3 -->
+    <rect x="1" y="16.5" width="14" height="1.3" rx="0.5" fill="url(#g-au-base)"/>
+    <rect x="1.5" y="16.2" width="13" height="0.35" rx="0.15" fill="url(#g-au-rim)"/>
+    <!-- Base gems -->
+    <circle class="sss-gem sss-gem-d1" cx="3" cy="16.8" r="0.35" fill="#00e5b0"/>
+    <circle class="sss-gem sss-gem-d2" cx="8" cy="17" r="0.4" fill="#9370db"/>
+    <circle class="sss-gem sss-gem-d3" cx="13" cy="16.8" r="0.35" fill="#00bfff"/>
+    <!-- Base tier 2 -->
+    <rect x="2.5" y="15.3" width="11" height="1" rx="0.4" fill="url(#g-au-body)"/>
+    <rect x="3" y="15.1" width="10" height="0.3" rx="0.15" fill="url(#g-au-rim)"/>
+    <!-- Base tier 1 -->
+    <rect x="3.5" y="14.3" width="9" height="0.9" rx="0.3" fill="url(#g-au-body)"/>
+    <!-- Base scrollwork -->
+    <path d="M4.2 14.9 C3.7 14.5 3.2 14.5 2.8 14.7" fill="none" stroke="#5b4ea8" stroke-width="0.2" opacity="0.4"/>
+    <path d="M11.8 14.9 C12.3 14.5 12.8 14.5 13.2 14.7" fill="none" stroke="#5b4ea8" stroke-width="0.2" opacity="0.4"/>
+    <!-- Stem -->
+    <rect x="6.5" y="10.5" width="3" height="3.8" rx="0.5" fill="url(#g-au-body)"/>
+    <ellipse cx="8" cy="12" rx="1.8" ry="0.6" fill="url(#g-au-rim)"/>
+    <ellipse cx="8" cy="10.5" rx="2.3" ry="0.5" fill="url(#g-au-rim)"/>
+    <ellipse cx="8" cy="13.2" rx="1.4" ry="0.35" fill="url(#g-au-rim)" opacity="0.6"/>
+    <!-- Stem gem -->
+    <circle class="sss-gem sss-gem-d2" cx="8" cy="12" r="0.45" fill="#da70d6"/>
+    <circle cx="8" cy="11.85" r="0.15" fill="#fff" opacity="0.5"/>
+    <!-- Cup body -->
+    <path d="M3 2 L13 2 C12.5 4.5 11.8 7 10.5 8.5 C9.5 9.7 8.8 10.5 8 10.5 C7.2 10.5 6.5 9.7 5.5 8.5 C4.2 7 3.5 4.5 3 2 Z" fill="url(#g-au-body)"/>
+    <!-- Cup inner glow -->
+    <path d="M4 2.5 L12 2.5 C11.6 4.5 11 6.5 10 7.8 C9.2 8.8 8.5 9.5 8 9.5 C7.5 9.5 6.8 8.8 6 7.8 C5 6.5 4.4 4.5 4 2.5 Z" fill="#00e5b0" opacity="0.12"/>
+    <!-- Cup rim -->
+    <path d="M2 1 Q2 0.3 2.8 0.3 L13.2 0.3 Q14 0.3 14 1 L13.2 2 L2.8 2 Z" fill="url(#g-au-rim)"/>
+    <rect x="3" y="0.15" width="10" height="0.25" rx="0.12" fill="#e0fff8" opacity="0.9"/>
+    <rect x="3.2" y="1.8" width="9.6" height="0.15" fill="#5b4ea8" opacity="0.4"/>
+    <!-- Crown -->
+    <g class="sss-crown">
+      <path d="M4.5 0.3 L5.5 -1.8 L7 -0.5 L8 -2.2 L9 -0.5 L10.5 -1.8 L11.5 0.3 Z" fill="url(#g-au-rim)"/>
+      <path d="M5 0 L5.8 -1.2 L7.1 -0.2 L8 -1.6 L8.9 -0.2 L10.2 -1.2 L11 0 Z" fill="url(#g-au-body)" opacity="0.6"/>
+      <circle cx="5.5" cy="-1.4" r="0.3" fill="#00e5b0" opacity="0.8"/>
+      <circle cx="8" cy="-1.8" r="0.35" fill="#da70d6" opacity="0.9"/>
+      <circle cx="10.5" cy="-1.4" r="0.3" fill="#00bfff" opacity="0.8"/>
+      <circle cx="5.4" cy="-1.5" r="0.1" fill="#fff" opacity="0.6"/>
+      <circle cx="7.9" cy="-1.9" r="0.12" fill="#fff" opacity="0.6"/>
+      <circle cx="10.4" cy="-1.5" r="0.1" fill="#fff" opacity="0.6"/>
+    </g>
+    <!-- Left handle -->
+    <path d="M3 2.8 C1.2 2.4 0.3 3.9 0.3 5.5 C0.3 7.0 1.2 8.0 3.2 7.9 C1.7 7.4 1.0 6.5 1.0 5.5 C1.0 4.2 1.8 3.1 3 3.0 Z" fill="url(#g-au-handle)"/>
+    <circle cx="3.2" cy="7.9" r="0.6" fill="url(#g-au-rim)"/>
+    <circle cx="3.2" cy="7.9" r="0.25" fill="url(#g-au-base)"/>
+    <circle class="sss-gem sss-gem-d1" cx="1.1" cy="5.5" r="0.35" fill="#00e5b0"/>
+    <circle cx="1.0" cy="5.35" r="0.1" fill="#fff" opacity="0.5"/>
+    <!-- Right handle -->
+    <path d="M13 2.8 C14.8 2.4 15.7 3.9 15.7 5.5 C15.7 7.0 14.8 8.0 12.8 7.9 C14.3 7.4 15.0 6.5 15.0 5.5 C15.0 4.2 14.2 3.1 13 3.0 Z" fill="url(#g-au-handle)"/>
+    <circle cx="12.8" cy="7.9" r="0.6" fill="url(#g-au-rim)"/>
+    <circle cx="12.8" cy="7.9" r="0.25" fill="url(#g-au-base)"/>
+    <circle class="sss-gem sss-gem-d3" cx="14.9" cy="5.5" r="0.35" fill="#00bfff"/>
+    <circle cx="14.8" cy="5.35" r="0.1" fill="#fff" opacity="0.5"/>
+    <!-- Engraved lines on cup -->
+    <line x1="3.8" y1="3.5" x2="12.2" y2="3.5" stroke="#5b4ea8" stroke-width="0.15" opacity="0.35"/>
+    <line x1="4.8" y1="8" x2="11.2" y2="8" stroke="#5b4ea8" stroke-width="0.15" opacity="0.35"/>
+    <!-- Rivets on rim -->
+    <circle cx="4.5" cy="1.2" r="0.22" fill="#e0fff8" opacity="0.6"/>
+    <circle cx="11.5" cy="1.2" r="0.22" fill="#e0fff8" opacity="0.6"/>
+    <circle cx="6.2" cy="0.85" r="0.15" fill="#e0fff8" opacity="0.4"/>
+    <circle cx="9.8" cy="0.85" r="0.15" fill="#e0fff8" opacity="0.4"/>
+    <!-- Star accents -->
+    <path d="M5 2.8 l0.15 0.35 0.38 0 -0.3 0.25 0.1 0.38 -0.33 -0.2 -0.33 0.2 0.1 -0.38 -0.3 -0.25 0.38 0z" fill="#00e5b0" opacity="0.5"/>
+    <path d="M11 2.8 l0.15 0.35 0.38 0 -0.3 0.25 0.1 0.38 -0.33 -0.2 -0.33 0.2 0.1 -0.38 -0.3 -0.25 0.38 0z" fill="#da70d6" opacity="0.5"/>
+    <!-- Medallion -->
+    <circle cx="8" cy="5.5" r="3" fill="none" stroke="#7b68ee" stroke-width="0.4"/>
+    <circle cx="8" cy="5.5" r="2.85" fill="none" stroke="#00e5b0" stroke-width="0.12" opacity="0.4"/>
+    <circle cx="8" cy="5.5" r="2.7" fill="none" stroke="#00bfff" stroke-width="0.12" opacity="0.6"/>
+    <circle cx="8" cy="5.5" r="2.4" fill="#FFF"/>
+    <text x="8" y="7.0" text-anchor="middle" font-family="Courier, Monospace" font-size="6" font-weight="bold" fill="#5b4ea8">S</text>
+  </g>
+
+</defs>
+
+<!-- ==================== Card 1: ??? (S-Rank Aurora) ==================== -->
+<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="110" height="110" viewBox="0 0 110 110" fill="none">
+  <!-- Card background -->
+  <rect x="0.5" y="0.5" rx="4.5" width="109" height="109" stroke="none" fill="none"/>
+  <!-- Inner aurora accent border -->
+  <rect x="3" y="3" rx="3" width="104" height="104" fill="none" stroke="url(#g-au-border)" stroke-width="0.4" opacity="0.3"/>
+  <!-- Second inner border shimmer -->
+  <rect x="5" y="5" rx="2.5" width="100" height="100" fill="none" stroke="#00e5b0" stroke-width="0.2" opacity="0.12"/>
+  <!-- Top-left corner flourish (aurora) -->
+  <path d="M6 3 Q3 3 3 6" fill="none" stroke="#00e5b0" stroke-width="0.7" opacity="0.45"/>
+  <path d="M3 10 C3 5 5 3 10 3" fill="none" stroke="#00bfff" stroke-width="0.4" opacity="0.35"/>
+  <path d="M3 14 C3 7 7 3 14 3" fill="none" stroke="#9370db" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 18 C3 9 9 3 18 3" fill="none" stroke="#da70d6" stroke-width="0.2" opacity="0.15"/>
+  <path d="M10 3 C8 5 8 7 10 8 C8 7 6 7 5 9" fill="none" stroke="#00e5b0" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 10 C5 8 7 8 8 10 C7 8 7 6 9 5" fill="none" stroke="#00bfff" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="5" cy="5" r="0.6" fill="#00e5b0" opacity="0.3"/>
+  <circle cx="11" cy="3.5" r="0.35" fill="#00bfff" opacity="0.2"/>
+  <circle cx="3.5" cy="11" r="0.35" fill="#9370db" opacity="0.2"/>
+  <circle cx="14" cy="3.5" r="0.25" fill="#da70d6" opacity="0.15"/>
+  <!-- Top-right corner flourish (aurora) -->
+  <path d="M104 3 Q107 3 107 6" fill="none" stroke="#da70d6" stroke-width="0.7" opacity="0.45"/>
+  <path d="M107 10 C107 5 105 3 100 3" fill="none" stroke="#9370db" stroke-width="0.4" opacity="0.35"/>
+  <path d="M107 14 C107 7 103 3 96 3" fill="none" stroke="#00bfff" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 18 C107 9 101 3 92 3" fill="none" stroke="#00e5b0" stroke-width="0.2" opacity="0.15"/>
+  <path d="M100 3 C102 5 102 7 100 8 C102 7 104 7 105 9" fill="none" stroke="#da70d6" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 10 C105 8 103 8 102 10 C103 8 103 6 101 5" fill="none" stroke="#9370db" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="105" cy="5" r="0.6" fill="#da70d6" opacity="0.3"/>
+  <circle cx="99" cy="3.5" r="0.35" fill="#9370db" opacity="0.2"/>
+  <circle cx="106.5" cy="11" r="0.35" fill="#00bfff" opacity="0.2"/>
+  <circle cx="96" cy="3.5" r="0.25" fill="#00e5b0" opacity="0.15"/>
+  <!-- Bottom-left corner flourish (aurora) -->
+  <path d="M6 107 Q3 107 3 104" fill="none" stroke="#9370db" stroke-width="0.7" opacity="0.45"/>
+  <path d="M3 100 C3 105 5 107 10 107" fill="none" stroke="#da70d6" stroke-width="0.4" opacity="0.35"/>
+  <path d="M3 96 C3 103 7 107 14 107" fill="none" stroke="#00e5b0" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 92 C3 101 9 107 18 107" fill="none" stroke="#00bfff" stroke-width="0.2" opacity="0.15"/>
+  <path d="M10 107 C8 105 8 103 10 102 C8 103 6 103 5 101" fill="none" stroke="#9370db" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 100 C5 102 7 102 8 100 C7 102 7 104 9 105" fill="none" stroke="#da70d6" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="5" cy="105" r="0.6" fill="#9370db" opacity="0.3"/>
+  <circle cx="11" cy="106.5" r="0.35" fill="#da70d6" opacity="0.2"/>
+  <circle cx="3.5" cy="99" r="0.35" fill="#00e5b0" opacity="0.2"/>
+  <circle cx="14" cy="106.5" r="0.25" fill="#00bfff" opacity="0.15"/>
+  <!-- Bottom-right corner flourish (aurora) -->
+  <path d="M104 107 Q107 107 107 104" fill="none" stroke="#00bfff" stroke-width="0.7" opacity="0.45"/>
+  <path d="M107 100 C107 105 105 107 100 107" fill="none" stroke="#00e5b0" stroke-width="0.4" opacity="0.35"/>
+  <path d="M107 96 C107 103 103 107 96 107" fill="none" stroke="#9370db" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 92 C107 101 101 107 92 107" fill="none" stroke="#da70d6" stroke-width="0.2" opacity="0.15"/>
+  <path d="M100 107 C102 105 102 103 100 102 C102 103 104 103 105 101" fill="none" stroke="#00bfff" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 100 C105 102 103 102 102 100 C103 102 103 104 101 105" fill="none" stroke="#00e5b0" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="105" cy="105" r="0.6" fill="#00bfff" opacity="0.3"/>
+  <circle cx="99" cy="106.5" r="0.35" fill="#00e5b0" opacity="0.2"/>
+  <circle cx="106.5" cy="99" r="0.35" fill="#9370db" opacity="0.2"/>
+  <circle cx="96" cy="106.5" r="0.25" fill="#da70d6" opacity="0.15"/>
+  <!-- Edge filigree accents (aurora) -->
+  <path d="M20 3 C22 4.5 24 4.5 26 3" fill="none" stroke="#00e5b0" stroke-width="0.25" opacity="0.18"/>
+  <path d="M45 3 C47 4.5 49 4.5 51 3" fill="none" stroke="#00bfff" stroke-width="0.25" opacity="0.18"/>
+  <path d="M59 3 C61 4.5 63 4.5 65 3" fill="none" stroke="#9370db" stroke-width="0.25" opacity="0.18"/>
+  <path d="M84 3 C86 4.5 88 4.5 90 3" fill="none" stroke="#da70d6" stroke-width="0.25" opacity="0.18"/>
+  <path d="M20 107 C22 105.5 24 105.5 26 107" fill="none" stroke="#da70d6" stroke-width="0.25" opacity="0.18"/>
+  <path d="M45 107 C47 105.5 49 105.5 51 107" fill="none" stroke="#9370db" stroke-width="0.25" opacity="0.18"/>
+  <path d="M59 107 C61 105.5 63 105.5 65 107" fill="none" stroke="#00bfff" stroke-width="0.25" opacity="0.18"/>
+  <path d="M84 107 C86 105.5 88 105.5 90 107" fill="none" stroke="#00e5b0" stroke-width="0.25" opacity="0.18"/>
+  <path d="M3 30 C4.5 32 4.5 34 3 36" fill="none" stroke="#00e5b0" stroke-width="0.25" opacity="0.15"/>
+  <path d="M3 55 C4.5 57 4.5 59 3 61" fill="none" stroke="#9370db" stroke-width="0.25" opacity="0.15"/>
+  <path d="M107 30 C105.5 32 105.5 34 107 36" fill="none" stroke="#da70d6" stroke-width="0.25" opacity="0.15"/>
+  <path d="M107 55 C105.5 57 105.5 59 107 61" fill="none" stroke="#00bfff" stroke-width="0.25" opacity="0.15"/>
+  <!-- Laurel wreath (aurora) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="6" y="8" width="80pt" height="80pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><use href="#lp-au"/><use href="#ld-au"/></svg>
+  <!-- Aurora glow layers (feathered) -->
+  <circle cx="55" cy="48" r="38" fill="url(#g-au-glow)" filter="url(#f-au-glow-feather)"/>
+  <circle cx="55" cy="47" r="27" fill="url(#g-au-glow2)" filter="url(#f-au-glow-feather)"/>
+  <circle cx="55" cy="43" r="16" fill="url(#g-au-glow)" filter="url(#f-au-glow-feather)"/>
+  <!-- Large center trophy (S-rank aurora) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="12" y="14" width="86" height="80" viewBox="0 0 30 30"><use href="#tp-s"/></svg>
+  <!-- Aurora sparkles (more than other cards, varied colors) -->
+  <polygon class="sp-aurora sp-a1" points="12,22 13,24.5 12,27 11,24.5"/>
+  <polygon class="sp-aurora sp-a2" points="98,22 99,24.5 98,27 97,24.5"/>
+  <polygon class="sp-aurora sp-a3" points="55,64 56,66.5 55,69 54,66.5"/>
+  <polygon class="sp-aurora sp-a4" points="25,42 26,44 25,46 24,44"/>
+  <polygon class="sp-aurora sp-a5" points="85,38 86,40 85,42 84,40"/>
+  <polygon class="sp-aurora sp-a6" points="40,28 41,30 40,32 39,30"/>
+  <polygon class="sp-aurora sp-a7" points="70,30 71,32 70,34 69,32"/>
+  <!-- Title -->
+  <text x="50%" y="18.5" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#7b68ee" opacity="0.25">?</text>
+  <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#666">?</text>
+  <!-- Subtitle -->
+  <text x="50%" y="91" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="9.5" fill="#666">One Commit Wonder</text>
+  <!-- Progress bar (full) -->
+  <rect x="15" y="101" rx="1.5" width="80" height="3.2" opacity="0.15" fill="#7b68ee"/>
+  <rect id="Speed-rank-progress" x="15" y="101" rx="1.5" height="3.2" fill="url(#g-au-progress)"/>
+</svg>
+
+<!-- ==================== Card 2: Sonarqube Surgeon (S-Rank Aurora) ==================== -->
+<svg xmlns="http://www.w3.org/2000/svg" x="111" y="0" width="110" height="110" viewBox="0 0 110 110" fill="none">
+  <!-- Card background -->
+  <rect x="0.5" y="0.5" rx="4.5" width="109" height="109" stroke="none" fill="none"/>
+  <!-- Inner aurora accent border -->
+  <rect x="3" y="3" rx="3" width="104" height="104" fill="none" stroke="url(#g-au-border)" stroke-width="0.4" opacity="0.3"/>
+  <rect x="5" y="5" rx="2.5" width="100" height="100" fill="none" stroke="#9370db" stroke-width="0.2" opacity="0.12"/>
+  <!-- Top-left corner flourish (aurora) -->
+  <path d="M6 3 Q3 3 3 6" fill="none" stroke="#9370db" stroke-width="0.7" opacity="0.45"/>
+  <path d="M3 10 C3 5 5 3 10 3" fill="none" stroke="#da70d6" stroke-width="0.4" opacity="0.35"/>
+  <path d="M3 14 C3 7 7 3 14 3" fill="none" stroke="#00e5b0" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 18 C3 9 9 3 18 3" fill="none" stroke="#00bfff" stroke-width="0.2" opacity="0.15"/>
+  <path d="M10 3 C8 5 8 7 10 8 C8 7 6 7 5 9" fill="none" stroke="#9370db" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 10 C5 8 7 8 8 10 C7 8 7 6 9 5" fill="none" stroke="#da70d6" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="5" cy="5" r="0.6" fill="#9370db" opacity="0.3"/>
+  <circle cx="11" cy="3.5" r="0.35" fill="#da70d6" opacity="0.2"/>
+  <circle cx="3.5" cy="11" r="0.35" fill="#00e5b0" opacity="0.2"/>
+  <!-- Top-right corner flourish (aurora) -->
+  <path d="M104 3 Q107 3 107 6" fill="none" stroke="#00bfff" stroke-width="0.7" opacity="0.45"/>
+  <path d="M107 10 C107 5 105 3 100 3" fill="none" stroke="#00e5b0" stroke-width="0.4" opacity="0.35"/>
+  <path d="M107 14 C107 7 103 3 96 3" fill="none" stroke="#da70d6" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 18 C107 9 101 3 92 3" fill="none" stroke="#9370db" stroke-width="0.2" opacity="0.15"/>
+  <path d="M100 3 C102 5 102 7 100 8 C102 7 104 7 105 9" fill="none" stroke="#00bfff" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 10 C105 8 103 8 102 10 C103 8 103 6 101 5" fill="none" stroke="#00e5b0" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="105" cy="5" r="0.6" fill="#00bfff" opacity="0.3"/>
+  <circle cx="99" cy="3.5" r="0.35" fill="#00e5b0" opacity="0.2"/>
+  <circle cx="106.5" cy="11" r="0.35" fill="#da70d6" opacity="0.2"/>
+  <!-- Bottom-left corner flourish (aurora) -->
+  <path d="M6 107 Q3 107 3 104" fill="none" stroke="#00e5b0" stroke-width="0.7" opacity="0.45"/>
+  <path d="M3 100 C3 105 5 107 10 107" fill="none" stroke="#00bfff" stroke-width="0.4" opacity="0.35"/>
+  <path d="M3 96 C3 103 7 107 14 107" fill="none" stroke="#9370db" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 92 C3 101 9 107 18 107" fill="none" stroke="#da70d6" stroke-width="0.2" opacity="0.15"/>
+  <path d="M10 107 C8 105 8 103 10 102 C8 103 6 103 5 101" fill="none" stroke="#00e5b0" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 100 C5 102 7 102 8 100 C7 102 7 104 9 105" fill="none" stroke="#00bfff" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="5" cy="105" r="0.6" fill="#00e5b0" opacity="0.3"/>
+  <circle cx="11" cy="106.5" r="0.35" fill="#00bfff" opacity="0.2"/>
+  <circle cx="3.5" cy="99" r="0.35" fill="#9370db" opacity="0.2"/>
+  <!-- Bottom-right corner flourish (aurora) -->
+  <path d="M104 107 Q107 107 107 104" fill="none" stroke="#da70d6" stroke-width="0.7" opacity="0.45"/>
+  <path d="M107 100 C107 105 105 107 100 107" fill="none" stroke="#9370db" stroke-width="0.4" opacity="0.35"/>
+  <path d="M107 96 C107 103 103 107 96 107" fill="none" stroke="#00bfff" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 92 C107 101 101 107 92 107" fill="none" stroke="#00e5b0" stroke-width="0.2" opacity="0.15"/>
+  <path d="M100 107 C102 105 102 103 100 102 C102 103 104 103 105 101" fill="none" stroke="#da70d6" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 100 C105 102 103 102 102 100 C103 102 103 104 101 105" fill="none" stroke="#9370db" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="105" cy="105" r="0.6" fill="#da70d6" opacity="0.3"/>
+  <circle cx="99" cy="106.5" r="0.35" fill="#9370db" opacity="0.2"/>
+  <circle cx="106.5" cy="99" r="0.35" fill="#00bfff" opacity="0.2"/>
+  <!-- Edge filigree accents (aurora) -->
+  <path d="M20 3 C22 4.5 24 4.5 26 3" fill="none" stroke="#9370db" stroke-width="0.25" opacity="0.18"/>
+  <path d="M45 3 C47 4.5 49 4.5 51 3" fill="none" stroke="#da70d6" stroke-width="0.25" opacity="0.18"/>
+  <path d="M59 3 C61 4.5 63 4.5 65 3" fill="none" stroke="#00e5b0" stroke-width="0.25" opacity="0.18"/>
+  <path d="M84 3 C86 4.5 88 4.5 90 3" fill="none" stroke="#00bfff" stroke-width="0.25" opacity="0.18"/>
+  <path d="M20 107 C22 105.5 24 105.5 26 107" fill="none" stroke="#00bfff" stroke-width="0.25" opacity="0.18"/>
+  <path d="M84 107 C86 105.5 88 105.5 90 107" fill="none" stroke="#9370db" stroke-width="0.25" opacity="0.18"/>
+  <path d="M3 30 C4.5 32 4.5 34 3 36" fill="none" stroke="#da70d6" stroke-width="0.25" opacity="0.15"/>
+  <path d="M3 55 C4.5 57 4.5 59 3 61" fill="none" stroke="#00e5b0" stroke-width="0.25" opacity="0.15"/>
+  <path d="M107 30 C105.5 32 105.5 34 107 36" fill="none" stroke="#00bfff" stroke-width="0.25" opacity="0.15"/>
+  <path d="M107 55 C105.5 57 105.5 59 107 61" fill="none" stroke="#9370db" stroke-width="0.25" opacity="0.15"/>
+  <!-- Laurel wreath (aurora) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="6" y="8" width="80pt" height="80pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><use href="#lp-au"/><use href="#ld-au"/></svg>
+<!-- Aurora glow layers (feathered) -->
+  <circle cx="55" cy="48" r="38" fill="url(#g-au-glow)" filter="url(#f-au-glow-feather)"/>
+  <circle cx="55" cy="47" r="27" fill="url(#g-au-glow2)" filter="url(#f-au-glow-feather)"/>
+  <circle cx="55" cy="43" r="16" fill="url(#g-au-glow)" filter="url(#f-au-glow-feather)"/>
+  <!-- Large center trophy (S-rank aurora) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="12" y="14" width="86" height="80" viewBox="0 0 30 30"><use href="#tp-s"/></svg>
+  <!-- Aurora sparkles -->
+  <polygon class="sp-aurora sp-a3" points="14,24 15,26.5 14,29 13,26.5"/>
+  <polygon class="sp-aurora sp-a1" points="96,24 97,26.5 96,29 95,26.5"/>
+  <polygon class="sp-aurora sp-a4" points="55,62 56,64.5 55,67 54,64.5"/>
+  <polygon class="sp-aurora sp-a2" points="30,38 31,40 30,42 29,40"/>
+  <polygon class="sp-aurora sp-a5" points="80,34 81,36 80,38 79,36"/>
+  <polygon class="sp-aurora sp-a6" points="42,50 43,52 42,54 41,52"/>
+  <polygon class="sp-aurora sp-a7" points="68,44 69,46 68,48 67,46"/>
+  <!-- Title -->
+  <text x="50%" y="18.5" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#7b68ee" opacity="0.25">?</text>
+  <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#666">?</text>
+  <!-- Subtitle -->
+  <text x="50%" y="91" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="9.5" fill="#666">Sonarqube Surgeon</text>
+  <!-- Progress bar (full) -->
+  <rect x="15" y="101" rx="1.5" width="80" height="3.2" opacity="0.15" fill="#7b68ee"/>
+  <rect id="Sonar-rank-progress" x="15" y="101" rx="1.5" height="3.2" fill="url(#g-au-progress)"/>
+</svg>
+
+<!-- ==================== Card 3: Readme Rockstar (S-Rank Aurora) ==================== -->
+<svg xmlns="http://www.w3.org/2000/svg" x="222" y="0" width="110" height="110" viewBox="0 0 110 110" fill="none">
+  <!-- Card background -->
+  <rect x="0.5" y="0.5" rx="4.5" width="109" height="109" stroke="none" fill="none"/>
+  <!-- Inner aurora accent border -->
+  <rect x="3" y="3" rx="3" width="104" height="104" fill="none" stroke="url(#g-au-border)" stroke-width="0.4" opacity="0.3"/>
+  <rect x="5" y="5" rx="2.5" width="100" height="100" fill="none" stroke="#00bfff" stroke-width="0.2" opacity="0.12"/>
+  <!-- Top-left corner flourish (aurora) -->
+  <path d="M6 3 Q3 3 3 6" fill="none" stroke="#00bfff" stroke-width="0.7" opacity="0.45"/>
+  <path d="M3 10 C3 5 5 3 10 3" fill="none" stroke="#9370db" stroke-width="0.4" opacity="0.35"/>
+  <path d="M3 14 C3 7 7 3 14 3" fill="none" stroke="#da70d6" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 18 C3 9 9 3 18 3" fill="none" stroke="#00e5b0" stroke-width="0.2" opacity="0.15"/>
+  <path d="M10 3 C8 5 8 7 10 8 C8 7 6 7 5 9" fill="none" stroke="#00bfff" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 10 C5 8 7 8 8 10 C7 8 7 6 9 5" fill="none" stroke="#9370db" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="5" cy="5" r="0.6" fill="#00bfff" opacity="0.3"/>
+  <circle cx="11" cy="3.5" r="0.35" fill="#9370db" opacity="0.2"/>
+  <circle cx="3.5" cy="11" r="0.35" fill="#da70d6" opacity="0.2"/>
+  <!-- Top-right corner flourish (aurora) -->
+  <path d="M104 3 Q107 3 107 6" fill="none" stroke="#00e5b0" stroke-width="0.7" opacity="0.45"/>
+  <path d="M107 10 C107 5 105 3 100 3" fill="none" stroke="#da70d6" stroke-width="0.4" opacity="0.35"/>
+  <path d="M107 14 C107 7 103 3 96 3" fill="none" stroke="#9370db" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 18 C107 9 101 3 92 3" fill="none" stroke="#00bfff" stroke-width="0.2" opacity="0.15"/>
+  <path d="M100 3 C102 5 102 7 100 8 C102 7 104 7 105 9" fill="none" stroke="#00e5b0" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 10 C105 8 103 8 102 10 C103 8 103 6 101 5" fill="none" stroke="#da70d6" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="105" cy="5" r="0.6" fill="#00e5b0" opacity="0.3"/>
+  <circle cx="99" cy="3.5" r="0.35" fill="#da70d6" opacity="0.2"/>
+  <circle cx="106.5" cy="11" r="0.35" fill="#9370db" opacity="0.2"/>
+  <!-- Bottom-left corner flourish (aurora) -->
+  <path d="M6 107 Q3 107 3 104" fill="none" stroke="#da70d6" stroke-width="0.7" opacity="0.45"/>
+  <path d="M3 100 C3 105 5 107 10 107" fill="none" stroke="#00e5b0" stroke-width="0.4" opacity="0.35"/>
+  <path d="M3 96 C3 103 7 107 14 107" fill="none" stroke="#00bfff" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 92 C3 101 9 107 18 107" fill="none" stroke="#9370db" stroke-width="0.2" opacity="0.15"/>
+  <path d="M10 107 C8 105 8 103 10 102 C8 103 6 103 5 101" fill="none" stroke="#da70d6" stroke-width="0.3" opacity="0.25"/>
+  <path d="M3 100 C5 102 7 102 8 100 C7 102 7 104 9 105" fill="none" stroke="#00e5b0" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="5" cy="105" r="0.6" fill="#da70d6" opacity="0.3"/>
+  <circle cx="11" cy="106.5" r="0.35" fill="#00e5b0" opacity="0.2"/>
+  <circle cx="3.5" cy="99" r="0.35" fill="#00bfff" opacity="0.2"/>
+  <!-- Bottom-right corner flourish (aurora) -->
+  <path d="M104 107 Q107 107 107 104" fill="none" stroke="#9370db" stroke-width="0.7" opacity="0.45"/>
+  <path d="M107 100 C107 105 105 107 100 107" fill="none" stroke="#00bfff" stroke-width="0.4" opacity="0.35"/>
+  <path d="M107 96 C107 103 103 107 96 107" fill="none" stroke="#00e5b0" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 92 C107 101 101 107 92 107" fill="none" stroke="#da70d6" stroke-width="0.2" opacity="0.15"/>
+  <path d="M100 107 C102 105 102 103 100 102 C102 103 104 103 105 101" fill="none" stroke="#9370db" stroke-width="0.3" opacity="0.25"/>
+  <path d="M107 100 C105 102 103 102 102 100 C103 102 103 104 101 105" fill="none" stroke="#00bfff" stroke-width="0.3" opacity="0.25"/>
+  <circle cx="105" cy="105" r="0.6" fill="#9370db" opacity="0.3"/>
+  <circle cx="99" cy="106.5" r="0.35" fill="#00bfff" opacity="0.2"/>
+  <circle cx="106.5" cy="99" r="0.35" fill="#00e5b0" opacity="0.2"/>
+  <!-- Edge filigree accents (aurora) -->
+  <path d="M20 3 C22 4.5 24 4.5 26 3" fill="none" stroke="#00bfff" stroke-width="0.25" opacity="0.18"/>
+  <path d="M45 3 C47 4.5 49 4.5 51 3" fill="none" stroke="#9370db" stroke-width="0.25" opacity="0.18"/>
+  <path d="M59 3 C61 4.5 63 4.5 65 3" fill="none" stroke="#da70d6" stroke-width="0.25" opacity="0.18"/>
+  <path d="M84 3 C86 4.5 88 4.5 90 3" fill="none" stroke="#00e5b0" stroke-width="0.25" opacity="0.18"/>
+  <path d="M20 107 C22 105.5 24 105.5 26 107" fill="none" stroke="#00e5b0" stroke-width="0.25" opacity="0.18"/>
+  <path d="M84 107 C86 105.5 88 105.5 90 107" fill="none" stroke="#00bfff" stroke-width="0.25" opacity="0.18"/>
+  <path d="M3 30 C4.5 32 4.5 34 3 36" fill="none" stroke="#9370db" stroke-width="0.25" opacity="0.15"/>
+  <path d="M3 55 C4.5 57 4.5 59 3 61" fill="none" stroke="#da70d6" stroke-width="0.25" opacity="0.15"/>
+  <path d="M107 30 C105.5 32 105.5 34 107 36" fill="none" stroke="#00e5b0" stroke-width="0.25" opacity="0.15"/>
+  <path d="M107 55 C105.5 57 105.5 59 107 61" fill="none" stroke="#00bfff" stroke-width="0.25" opacity="0.15"/>
+  <!-- Laurel wreath (aurora) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="6" y="8" width="80pt" height="80pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><use href="#lp-au"/><use href="#ld-au"/></svg>
+  <!-- Aurora glow layers (feathered) -->
+  <circle cx="55" cy="48" r="38" fill="url(#g-au-glow)" filter="url(#f-au-glow-feather)"/>
+  <circle cx="55" cy="47" r="27" fill="url(#g-au-glow2)" filter="url(#f-au-glow-feather)"/>
+  <circle cx="55" cy="43" r="16" fill="url(#g-au-glow)" filter="url(#f-au-glow-feather)"/>
+  <!-- Large center trophy (S-rank aurora) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="12" y="14" width="86" height="80" viewBox="0 0 30 30"><use href="#tp-s"/></svg>
+  <!-- Aurora sparkles -->
+  <polygon class="sp-aurora sp-a5" points="15,26 16,28.5 15,31 14,28.5"/>
+  <polygon class="sp-aurora sp-a2" points="95,22 96,24.5 95,27 94,24.5"/>
+  <polygon class="sp-aurora sp-a7" points="52,66 53,68.5 52,71 51,68.5"/>
+  <polygon class="sp-aurora sp-a1" points="28,36 29,38 28,40 27,38"/>
+  <polygon class="sp-aurora sp-a4" points="82,40 83,42 82,44 81,42"/>
+  <polygon class="sp-aurora sp-a6" points="38,52 39,54 38,56 37,54"/>
+  <polygon class="sp-aurora sp-a3" points="72,32 73,34 72,36 71,34"/>
+  <!-- Title -->
+  <text x="50%" y="18.5" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#7b68ee" opacity="0.25">?</text>
+  <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#666">?</text>
+  <!-- Subtitle -->
+  <text x="50%" y="91" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="9.5" fill="#666">README Rockstar</text>
+  <!-- Progress bar (full) -->
+  <rect x="15" y="101" rx="1.5" width="80" height="3.2" opacity="0.15" fill="#7b68ee"/>
+  <rect id="Readme-rank-progress" x="15" y="101" rx="1.5" height="3.2" fill="url(#g-au-progress)"/>
+</svg>
+
+<!-- ==================== Card 4: Stars (A-Rank Gold) ==================== -->
+<svg xmlns="http://www.w3.org/2000/svg" x="333" y="0" width="110" height="110" viewBox="0 0 110 110" fill="none">
+  <!-- Card background -->
+  <rect x="0.5" y="0.5" rx="4.5" width="109" height="109" stroke="none" fill="none"/>
+  <!-- Inner gold accent border -->
+  <rect x="3" y="3" rx="3" width="104" height="104" fill="none" stroke="#eac200" stroke-width="0.3" opacity="0.2"/>
+  <!-- Corner flourishes -->
+  <!-- Top-left corner flourish -->
+  <path d="M6 3 Q3 3 3 6" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M3 10 C3 5 5 3 10 3" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M3 14 C3 7 7 3 14 3" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M10 3 C8 5 8 7 10 8 C8 7 6 7 5 9" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M3 10 C5 8 7 8 8 10 C7 8 7 6 9 5" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="5" cy="5" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="10.5" cy="3.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="3.5" cy="10.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Top-right corner flourish -->
+  <path d="M104 3 Q107 3 107 6" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M107 10 C107 5 105 3 100 3" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M107 14 C107 7 103 3 96 3" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M100 3 C102 5 102 7 100 8 C102 7 104 7 105 9" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M107 10 C105 8 103 8 102 10 C103 8 103 6 101 5" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="105" cy="5" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="99.5" cy="3.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="106.5" cy="10.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Bottom-left corner flourish -->
+  <path d="M6 107 Q3 107 3 104" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M3 100 C3 105 5 107 10 107" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M3 96 C3 103 7 107 14 107" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M10 107 C8 105 8 103 10 102 C8 103 6 103 5 101" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M3 100 C5 102 7 102 8 100 C7 102 7 104 9 105" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="5" cy="105" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="10.5" cy="106.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="3.5" cy="99.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Bottom-right corner flourish -->
+  <path d="M104 107 Q107 107 107 104" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M107 100 C107 105 105 107 100 107" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M107 96 C107 103 103 107 96 107" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M100 107 C102 105 102 103 100 102 C102 103 104 103 105 101" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M107 100 C105 102 103 102 102 100 C103 102 103 104 101 105" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="105" cy="105" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="99.5" cy="106.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="106.5" cy="99.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Edge filigree accents -->
+  <path d="M20 3 C22 4.5 24 4.5 26 3" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M84 3 C86 4.5 88 4.5 90 3" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M20 107 C22 105.5 24 105.5 26 107" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M84 107 C86 105.5 88 105.5 90 107" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M3 30 C4.5 32 4.5 34 3 36" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M107 30 C105.5 32 105.5 34 107 36" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <!-- Glow behind main trophy -->
+  <circle cx="55" cy="43" r="18" fill="url(#g-glow)"/>
+  <!-- Small left trophy (darkened) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="-1" y="27" width="50" height="50" viewBox="0 0 30 30"><g filter="url(#f-darken)"><use href="#tp"/></g></svg>
+  <!-- Small right trophy (darkened) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="61" y="27" width="50" height="50" viewBox="0 0 30 30"><g filter="url(#f-darken)"><use href="#tp"/></g></svg>
+  <!-- Laurel wreath (on top of secondary trophies) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="6" y="8" width="80pt" height="80pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><use href="#lp"/><use href="#ld"/></svg>
+  <circle cx="55" cy="48" r="36" fill="url(#g-laurel-glow)"/>
+  <!-- Large center trophy -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="12" y="14" width="86" height="80" viewBox="0 0 30 30"><use href="#tp-a3"/></svg>
+  <!-- Sparkles -->
+  <polygon class="sp sp1" points="13,22 14,24.5 13,27 12,24.5"/>
+  <polygon class="sp sp2" points="97,22 98,24.5 97,27 96,24.5"/>
+  <polygon class="sp sp3" points="55,64 56,66.5 55,69 54,66.5"/>
+  <polygon class="sp sp4" points="30,40 31,42 30,44 29,42"/>
+  <polygon class="sp sp5" points="80,38 81,40 80,42 79,40"/>
+  <!-- Title -->
+  <text x="50%" y="18.5" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#eac200" opacity="0.25">Stars</text>
+  <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#666">Stars</text>
+  <!-- Subtitle -->
+  <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="9.5" fill="#666">Super Star</text>
+  <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">121pt</text>
+  <!-- Progress bar -->
+  <rect x="15" y="101" rx="1.5" width="80" height="3.2" opacity="0.15" fill="#0366d6"/>
+  <rect id="Stars-rank-progress" x="15" y="101" rx="1.5" height="3.2" fill="url(#g-progress)"/>
+</svg>
+
+<!-- ==================== Card 5: Commits (A-Rank Gold) ==================== -->
+<svg xmlns="http://www.w3.org/2000/svg" x="444" y="0" width="110" height="110" viewBox="0 0 110 110" fill="none">
+  <rect x="0.5" y="0.5" rx="4.5" width="109" height="109" stroke="none" fill="none"/>
+  <rect x="3" y="3" rx="3" width="104" height="104" fill="none" stroke="#eac200" stroke-width="0.3" opacity="0.2"/>
+  <!-- Top-left corner flourish -->
+  <path d="M6 3 Q3 3 3 6" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M3 10 C3 5 5 3 10 3" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M3 14 C3 7 7 3 14 3" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M10 3 C8 5 8 7 10 8 C8 7 6 7 5 9" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M3 10 C5 8 7 8 8 10 C7 8 7 6 9 5" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="5" cy="5" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="10.5" cy="3.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="3.5" cy="10.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Top-right corner flourish -->
+  <path d="M104 3 Q107 3 107 6" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M107 10 C107 5 105 3 100 3" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M107 14 C107 7 103 3 96 3" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M100 3 C102 5 102 7 100 8 C102 7 104 7 105 9" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M107 10 C105 8 103 8 102 10 C103 8 103 6 101 5" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="105" cy="5" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="99.5" cy="3.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="106.5" cy="10.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Bottom-left corner flourish -->
+  <path d="M6 107 Q3 107 3 104" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M3 100 C3 105 5 107 10 107" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M3 96 C3 103 7 107 14 107" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M10 107 C8 105 8 103 10 102 C8 103 6 103 5 101" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M3 100 C5 102 7 102 8 100 C7 102 7 104 9 105" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="5" cy="105" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="10.5" cy="106.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="3.5" cy="99.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Bottom-right corner flourish -->
+  <path d="M104 107 Q107 107 107 104" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M107 100 C107 105 105 107 100 107" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M107 96 C107 103 103 107 96 107" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M100 107 C102 105 102 103 100 102 C102 103 104 103 105 101" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M107 100 C105 102 103 102 102 100 C103 102 103 104 101 105" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="105" cy="105" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="99.5" cy="106.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="106.5" cy="99.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Edge filigree accents -->
+  <path d="M20 3 C22 4.5 24 4.5 26 3" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M84 3 C86 4.5 88 4.5 90 3" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M20 107 C22 105.5 24 105.5 26 107" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M84 107 C86 105.5 88 105.5 90 107" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M3 30 C4.5 32 4.5 34 3 36" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M107 30 C105.5 32 105.5 34 107 36" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <circle cx="55" cy="43" r="18" fill="url(#g-glow)"/>
+  <!-- Small right trophy (darkened, no handles) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="61" y="27" width="50" height="50" viewBox="0 0 30 30"><g filter="url(#f-darken)"><use href="#tp-a1"/></g></svg>
+  <!-- Laurel wreath (on top of secondary trophies) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="6" y="8" width="80pt" height="80pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><use href="#lp"/><use href="#ld"/></svg>
+  <circle cx="55" cy="48" r="36" fill="url(#g-laurel-glow)"/>
+  <!-- Large center trophy -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="12" y="14" width="86" height="80" viewBox="0 0 30 30"><use href="#tp-a2"/></svg>
+  <!-- Sparkles -->
+  <polygon class="sp sp1" points="20,26 21,28.5 20,31 19,28.5"/>
+  <polygon class="sp sp3" points="90,30 91,32.5 90,35 89,32.5"/>
+  <polygon class="sp sp2" points="55,20 56,22 55,24 54,22"/>
+  <polygon class="sp sp4" points="35,50 36,52 35,54 34,52"/>
+  <polygon class="sp sp5" points="75,42 76,44 75,46 74,44"/>
+  <text x="50%" y="18.5" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#eac200" opacity="0.25">Commits</text>
+  <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#666">Commits</text>
+  <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="9.5" fill="#666">High Committer</text>
+  <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">726pt</text>
+  <rect x="15" y="101" rx="1.5" width="80" height="3.2" opacity="0.15" fill="#0366d6"/>
+  <rect id="Commits-rank-progress" x="15" y="101" rx="1.5" height="3.2" fill="url(#g-progress)"/>
+</svg>
+
+<!-- ==================== Card 6: Followers (A-Rank Gold) ==================== -->
+<svg xmlns="http://www.w3.org/2000/svg" x="555" y="0" width="110" height="110" viewBox="0 0 110 110" fill="none">
+  <rect x="0.5" y="0.5" rx="4.5" width="109" height="109" stroke="none" fill="none"/>
+  <rect x="3" y="3" rx="3" width="104" height="104" fill="none" stroke="#eac200" stroke-width="0.3" opacity="0.2"/>
+  <!-- Top-left corner flourish -->
+  <path d="M6 3 Q3 3 3 6" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M3 10 C3 5 5 3 10 3" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M3 14 C3 7 7 3 14 3" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M10 3 C8 5 8 7 10 8 C8 7 6 7 5 9" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M3 10 C5 8 7 8 8 10 C7 8 7 6 9 5" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="5" cy="5" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="10.5" cy="3.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="3.5" cy="10.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Top-right corner flourish -->
+  <path d="M104 3 Q107 3 107 6" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M107 10 C107 5 105 3 100 3" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M107 14 C107 7 103 3 96 3" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M100 3 C102 5 102 7 100 8 C102 7 104 7 105 9" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M107 10 C105 8 103 8 102 10 C103 8 103 6 101 5" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="105" cy="5" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="99.5" cy="3.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="106.5" cy="10.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Bottom-left corner flourish -->
+  <path d="M6 107 Q3 107 3 104" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M3 100 C3 105 5 107 10 107" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M3 96 C3 103 7 107 14 107" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M10 107 C8 105 8 103 10 102 C8 103 6 103 5 101" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M3 100 C5 102 7 102 8 100 C7 102 7 104 9 105" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="5" cy="105" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="10.5" cy="106.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="3.5" cy="99.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Bottom-right corner flourish -->
+  <path d="M104 107 Q107 107 107 104" fill="none" stroke="#daa520" stroke-width="0.6" opacity="0.35"/>
+  <path d="M107 100 C107 105 105 107 100 107" fill="none" stroke="#daa520" stroke-width="0.35" opacity="0.25"/>
+  <path d="M107 96 C107 103 103 107 96 107" fill="none" stroke="#c9a400" stroke-width="0.25" opacity="0.15"/>
+  <path d="M100 107 C102 105 102 103 100 102 C102 103 104 103 105 101" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <path d="M107 100 C105 102 103 102 102 100 C103 102 103 104 101 105" fill="none" stroke="#daa520" stroke-width="0.25" opacity="0.2"/>
+  <circle cx="105" cy="105" r="0.5" fill="#ffd700" opacity="0.2"/>
+  <circle cx="99.5" cy="106.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <circle cx="106.5" cy="99.5" r="0.3" fill="#daa520" opacity="0.15"/>
+  <!-- Edge filigree accents -->
+  <path d="M20 3 C22 4.5 24 4.5 26 3" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M84 3 C86 4.5 88 4.5 90 3" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M20 107 C22 105.5 24 105.5 26 107" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M84 107 C86 105.5 88 105.5 90 107" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M3 30 C4.5 32 4.5 34 3 36" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <path d="M107 30 C105.5 32 105.5 34 107 36" fill="none" stroke="#daa520" stroke-width="0.2" opacity="0.12"/>
+  <svg xmlns="http://www.w3.org/2000/svg" x="6" y="8" width="80pt" height="80pt" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><use href="#lp"/><use href="#ld"/></svg>
+  <circle cx="55" cy="48" r="36" fill="url(#g-laurel-glow)"/>
+  <circle cx="55" cy="43" r="18" fill="url(#g-glow)"/>
+  <svg xmlns="http://www.w3.org/2000/svg" x="12" y="14" width="86" height="80" viewBox="0 0 30 30"><use href="#tp-a1"/></svg>
+  <!-- Sparkles -->
+  <polygon class="sp sp2" points="18,24 19,26.5 18,29 17,26.5"/>
+  <polygon class="sp sp1" points="92,28 93,30.5 92,33 91,30.5"/>
+  <polygon class="sp sp3" points="55,62 56,64 55,66 54,64"/>
+  <polygon class="sp sp4" points="40,36 41,38 40,40 39,38"/>
+  <polygon class="sp sp5" points="70,32 71,34 70,36 69,34"/>
+  <text x="50%" y="18.5" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#eac200" opacity="0.25">Followers</text>
+  <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#666">Followers</text>
+  <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="9.5" fill="#666">Dynamic User</text>
+  <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">48pt</text>
+  <rect x="15" y="101" rx="1.5" width="80" height="3.2" opacity="0.15" fill="#0366d6"/>
+  <rect id="Followers-rank-progress" x="15" y="101" rx="1.5" height="3.2" fill="url(#g-progress)"/>
+</svg>
+
+<!-- ==================== Card 7: Repositories (B-Rank Silver) ==================== -->
+<svg xmlns="http://www.w3.org/2000/svg" x="666" y="0" width="110" height="110" viewBox="0 0 110 110" fill="none">
+  <rect x="0.5" y="0.5" rx="4.5" width="109" height="109" stroke="none" fill="none"/>
+  <!-- Inner silver accent border -->
+  <rect x="3" y="3" rx="3" width="104" height="104" fill="none" stroke="#b0b0b8" stroke-width="0.3" opacity="0.2"/>
+  <!-- Top-left corner flourish (silver, simpler) -->
+  <path d="M6 3 Q3 3 3 6" fill="none" stroke="#a8a8b5" stroke-width="0.55" opacity="0.3"/>
+  <path d="M3 10 C3 5 5 3 10 3" fill="none" stroke="#a8a8b5" stroke-width="0.3" opacity="0.2"/>
+  <circle cx="5" cy="5" r="0.45" fill="#c0c0d0" opacity="0.18"/>
+  <!-- Top-right corner flourish (silver) -->
+  <path d="M104 3 Q107 3 107 6" fill="none" stroke="#a8a8b5" stroke-width="0.55" opacity="0.3"/>
+  <path d="M107 10 C107 5 105 3 100 3" fill="none" stroke="#a8a8b5" stroke-width="0.3" opacity="0.2"/>
+  <circle cx="105" cy="5" r="0.45" fill="#c0c0d0" opacity="0.18"/>
+  <!-- Bottom-left corner flourish (silver) -->
+  <path d="M6 107 Q3 107 3 104" fill="none" stroke="#a8a8b5" stroke-width="0.55" opacity="0.3"/>
+  <path d="M3 100 C3 105 5 107 10 107" fill="none" stroke="#a8a8b5" stroke-width="0.3" opacity="0.2"/>
+  <circle cx="5" cy="105" r="0.45" fill="#c0c0d0" opacity="0.18"/>
+  <!-- Bottom-right corner flourish (silver) -->
+  <path d="M104 107 Q107 107 107 104" fill="none" stroke="#a8a8b5" stroke-width="0.55" opacity="0.3"/>
+  <path d="M107 100 C107 105 105 107 100 107" fill="none" stroke="#a8a8b5" stroke-width="0.3" opacity="0.2"/>
+  <circle cx="105" cy="105" r="0.45" fill="#c0c0d0" opacity="0.18"/>
+  <!-- Glow behind main trophy -->
+  <circle cx="55" cy="43" r="18" fill="url(#g-sv-glow)"/>
+  <!-- Small left trophy (darkened) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="-1" y="27" width="50" height="50" viewBox="0 0 30 30"><g filter="url(#f-darken)"><use href="#tp-b"/></g></svg>
+  <!-- Small right trophy (darkened) -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="61" y="27" width="50" height="50" viewBox="0 0 30 30"><g filter="url(#f-darken)"><use href="#tp-b"/></g></svg>
+  <!-- Large center trophy -->
+  <svg xmlns="http://www.w3.org/2000/svg" x="12" y="14" width="86" height="80" viewBox="0 0 30 30"><use href="#tp-b3"/></svg>
+  <!-- Silver sparkles -->
+  <polygon class="sp-sv sp1" points="16,24 17,26.5 16,29 15,26.5"/>
+  <polygon class="sp-sv sp2" points="94,28 95,30.5 94,33 93,30.5"/>
+  <polygon class="sp-sv sp3" points="55,58 56,60 55,62 54,60"/>
+  <polygon class="sp-sv sp4" points="28,42 29,44 28,46 27,44"/>
+  <polygon class="sp-sv sp5" points="82,38 83,40 82,42 81,40"/>
+  <!-- Title -->
+  <text x="50%" y="18.5" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#a0a0aa" opacity="0.25">Repositories</text>
+  <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#666">Repositories</text>
+  <!-- Subtitle -->
+  <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="9.5" fill="#666">High Creator</text>
+  <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#666">23pt</text>
+  <!-- Progress bar -->
+  <rect x="15" y="101" rx="1.5" width="80" height="3.2" opacity="0.15" fill="#0366d6"/>
+  <rect id="Repositories-rank-progress" x="15" y="101" rx="1.5" height="3.2" fill="url(#g-progress)"/>
+</svg>
+
+<text x="388" y="124" text-anchor="middle" font-family="'Segoe Script','Comic Sans MS','Bradley Hand',cursive" font-size="10" fill="#666">@lextpf</text>
+</svg>
