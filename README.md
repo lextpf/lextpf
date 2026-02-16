@@ -27,4 +27,5 @@ constexpr auto g_Var = Developer
 
 ![Trophies](./svg-trophies-v12.svg)
 
+<img src="https://antigravity.google/assets/image/brand/antigravity-icon__full-color.png" width="50" height="50">
 </div>
