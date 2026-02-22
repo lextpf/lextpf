@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="150" viewBox="0 0 800 150">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="0.35" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="termBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e1019"/>
+      <stop offset="100%" stop-color="#090b12"/>
+    </linearGradient>
+    <linearGradient id="titleBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c1e2a"/>
+      <stop offset="100%" stop-color="#171923"/>
+    </linearGradient>
+    <linearGradient id="tabBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e1019"/>
+      <stop offset="100%" stop-color="#0b0d15"/>
+    </linearGradient>
+    <clipPath id="rc">
+      <rect width="800" height="130" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#rc)">
+    <!-- Window background -->
+    <rect width="800" height="130" fill="url(#termBg)"/>
+
+    <!-- Title bar -->
+    <rect width="800" height="38" fill="url(#titleBg)"/>
+    <line x1="0" y1="38" x2="800" y2="38" stroke="#0a0c14" stroke-width="1"/>
+
+    <!-- Active tab -->
+    <rect x="10" y="8" width="200" height="30" rx="8" ry="8" fill="url(#tabBg)"/>
+    <rect x="10" y="28" width="200" height="10" fill="url(#tabBg)"/>
+    <rect x="10" y="36" width="200" height="2" fill="url(#tabBg)"/>
+
+    <!-- Command prompt icon -->
+    <g transform="translate(21, 15.5) scale(0.88)">
+      <path d="M0.792725 12.2929L5.08562 8.00002L0.792725 3.70712L2.20694 2.29291L7.91405 8.00002L2.20694 13.7071L0.792725 12.2929Z" fill="#8b8fa8"/>
+      <path d="M7.00006 15H15.0001V13H7.00006V15Z" fill="#8b8fa8"/>
+    </g>
+
+    <!-- Tab title -->
+    <text x="38" y="27" font-family="'Segoe UI','Cascadia Code',sans-serif" font-size="12" font-weight="500" fill="#a8adc4">Command Prompt</text>
+
+    <!-- Tab close -->
+    <g opacity="0.35">
+      <line x1="193" y1="18" x2="199" y2="24" stroke="#a8adc4" stroke-width="1"/>
+      <line x1="199" y1="18" x2="193" y2="24" stroke="#a8adc4" stroke-width="1"/>
+    </g>
+
+    <!-- New tab + -->
+    <text x="224" y="26" font-family="'Segoe UI',sans-serif" font-size="17" fill="#454960">+</text>
+
+    <!-- Window controls -->
+    <line x1="709" y1="19" x2="721" y2="19" stroke="#e5c07b" stroke-width="1.2"/>
+    <rect x="742" y="13" width="10" height="10" fill="none" stroke="#98c379" stroke-width="1.2" rx="1.5"/>
+    <line x1="777" y1="14" x2="787" y2="25" stroke="#e06c75" stroke-width="1.3"/>
+    <line x1="787" y1="14" x2="777" y2="25" stroke="#e06c75" stroke-width="1.3"/>
+
+    <!-- Terminal content -->
+    <g filter="url(#glow)">
+      <text x="18" y="66" font-family="'Cascadia Code','Fira Code','Consolas',monospace" font-size="13">
+        <tspan fill="#98c379">alex</tspan><tspan fill="#5c6178">@</tspan><tspan fill="#61afef">lextpf</tspan><tspan fill="#5c6178">:~$ </tspan>
+        <tspan fill="#bfc4db">git log --oneline -1</tspan>
+      </text>
+
+      <text x="18" y="92" font-family="'Cascadia Code','Fira Code','Consolas',monospace" font-size="13">
+        <tspan fill="#e5c07b">e7f2a84</tspan>
+        <tspan fill="#5c6178"> (</tspan><tspan fill="#e06c75">HEAD</tspan>
+        <tspan fill="#c678dd"> -&gt;</tspan>
+        <tspan fill="#56b6c2"> main</tspan><tspan fill="#5c6178">)</tspan>
+        <tspan fill="#bfc4db"> Powered by Google Antigravity</tspan>
+      </text>
+
+      <image x="420" y="78" width="18" height="18" href="data:image/png;base64,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"/>
+    </g>
+
+    <!-- Blinking cursor on new prompt -->
+    <text x="18" y="116" font-family="'Cascadia Code','Fira Code','Consolas',monospace" font-size="13">
+      <tspan fill="#98c379">alex</tspan><tspan fill="#5c6178">@</tspan><tspan fill="#61afef">lextpf</tspan><tspan fill="#5c6178">:~$ </tspan>
+    </text>
+    <rect x="130" y="105" width="8" height="14" fill="#61afef" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Outer border -->
+    <rect width="800" height="130" rx="10" ry="10" fill="none" stroke="#1e2133" stroke-width="1"/>
+  </g>
+</svg>
