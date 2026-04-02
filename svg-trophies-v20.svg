@@ -1822,7 +1822,7 @@
   <text x="50%" y="18.5" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#eac200" opacity="0.1" class="type-title type-td4">Commits</text>
   <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#666" class="type-title type-td4">Commits</text>
   <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="600" font-size="9.5" fill="#666" class="type-subtitle type-sd4">High Committer</text>
-  <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="600" font-size="10" fill="#777" class="type-points type-pd4">301pt</text>
+  <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="600" font-size="10" fill="#777" class="type-points type-pd4">437pt</text>
   <rect x="15" y="101" rx="1.5" width="80" height="2.8" opacity="0.1" fill="#0366d6"/>
   <rect id="Commits-rank-progress" class="progress-shimmer" x="15" y="101" rx="1.4" height="2.8" fill="url(#g-progress)"/>
 </svg>
